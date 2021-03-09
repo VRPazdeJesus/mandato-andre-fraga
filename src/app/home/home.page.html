@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
   <!-- menu -->
-  <nav class="navbar navbar-expand-lg personal-navbar">
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
     <div class="container-fluid">
       <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga">
       <button class="btn personal-btn-login" type="submit">Login</button>
@@ -42,24 +42,10 @@
         <div class="col-3 personal-links-menu text-bottom"><span class="project-text-white">Colabore</span></div>
         <div class="col-3 personal-links-menu text-bottom"><span class="project-text-white">Contato</span></div>
       </div>
-      <!-- <ul class="personal-navbar-nav me-auto mb-2 mt-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Quem sou</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Nosso Mandato</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Colabore</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Contato</a>
-        </li>
-      </ul> -->
     </div>
   </nav>
   <!-- slides -->
-  <ion-slides class="component-background" pager="false" [options]="slideOpts">
+  <ion-slides class="component-background component-space-nav" pager="false" [options]="slideOpts">
     <ion-slide>
       <img class="d-block w-100" src="../../assets/card1.png" alt="First slide">
     </ion-slide>
