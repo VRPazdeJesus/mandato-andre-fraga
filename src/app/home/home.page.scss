@@ -72,3 +72,8 @@
 .project-text-white:hover {
   color: var(--ion-color-secondary);
 }
+
+.component-background {
+  margin-top: -20px;
+  z-index: -1;
+}
