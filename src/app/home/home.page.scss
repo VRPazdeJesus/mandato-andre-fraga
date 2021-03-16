@@ -1,7 +1,6 @@
 //deafult
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -29,6 +28,11 @@
 //new
 ion-content {
   --background: var(--ion-color-light);
+}
+
+.component-bg-primary {
+  --background: var(--ion-color-primary);
+  background: var(--ion-color-primary);
 }
 
 .component-bg-secondary {
@@ -127,6 +131,10 @@ ion-content {
   color: var(--ion-color-dark);
   font-weight: normal;
   font-size: 1rem;
+}
+
+.component-p-space {
+  margin-top: 2.5rem !important;
 }
 
 .component-hr {
