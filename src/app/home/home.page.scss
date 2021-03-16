@@ -40,6 +40,11 @@ ion-content {
   background: var(--ion-color-secondary);
 }
 
+.component-bg-light {
+  --background: white;
+  background: white;
+}
+
 .personal-navbar {
   background-color: var(--ion-color-primary);
   border-radius: 0 0 0 20px;
@@ -143,6 +148,27 @@ ion-content {
   background: var(--ion-color-primary);
   opacity: 1;
   margin: 0rem 0rem 1.25rem 0rem;
+}
+
+.component-card-title {
+  border-radius: 50px;
+  width: 320px;
+  height: 50px;
+  z-index: 1;
+  margin: 0 auto;
+  float: none;;
+  background: #006116;
+}
+
+.component-card-body {
+  flex: 1 1 auto;
+  padding: 0.7rem;
+}
+
+.component-card-content {
+  margin-top: -25px;
+  z-index: 0;
+  border-radius: 14px;
 }
 
 .no-border {
