@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavController } from  '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,15 @@ import { Component, Input } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private nav:NavController) {}
 
   slideOpts = {
     initialSlide: 1,
     speed: 400
   };
+
+  proximo(values:any) {
+    this.nav.navigateForward('/'+values);
+  }
 
 }
