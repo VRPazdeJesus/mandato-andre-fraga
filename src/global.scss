@@ -134,7 +134,7 @@ ion-content {
 }
 
 .component-active {
-    color: var(--ion-color-secondary);
+    color: var(--ion-color-secondary) !important;
 }
 
 .component-space-icon {
