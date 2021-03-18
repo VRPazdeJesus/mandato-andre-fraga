@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'nosso-mandato',
     loadChildren: () => import('./nosso-mandato/nosso-mandato.module').then( m => m.NossoMandatoPageModule)
   },
+  {
+    path: 'projeto-de-lei',
+    loadChildren: () => import('./projeto-de-lei/projeto-de-lei.module').then( m => m.ProjetoDeLeiPageModule)
+  },
 ];
 
 @NgModule({
