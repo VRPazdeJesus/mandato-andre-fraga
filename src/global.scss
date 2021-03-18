@@ -286,3 +286,11 @@ ion-content {
     font-size: 1rem;
     border-radius: 1.2rem;
 }
+
+.z-index-up {
+    z-index: 1;
+}
+
+.z-index-down {
+    z-index: -1;
+}
