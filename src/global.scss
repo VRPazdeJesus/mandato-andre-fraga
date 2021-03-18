@@ -40,6 +40,11 @@ ion-content {
     background: var(--ion-color-secondary);
 }
 
+.component-bg-grey {
+    --background: #E5E5E5;
+    background: #E5E5E5;
+}
+
 .component-bg-light {
     --background: white;
     background: white;
