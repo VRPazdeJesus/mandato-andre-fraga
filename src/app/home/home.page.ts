@@ -11,7 +11,7 @@ export class HomePage {
   constructor(private nav:NavController) {}
 
   slideOpts = {
-    initialSlide: 1,
+    initialSlide: 0,
     speed: 400
   };
 
