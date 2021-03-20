@@ -14,6 +14,7 @@ export class IdeiasPage implements OnInit {
   }
 
   proximo(values:any) {
+    console.log(values)
     this.nav.navigateForward('/'+values);
   }
 
