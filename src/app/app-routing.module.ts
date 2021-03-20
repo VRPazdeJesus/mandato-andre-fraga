@@ -27,6 +27,22 @@ const routes: Routes = [
     path: 'fiscalizacao',
     loadChildren: () => import('./fiscalizacao/fiscalizacao.module').then( m => m.FiscalizacaoPageModule)
   },
+  {
+    path: 'ideias-ods3',
+    loadChildren: () => import('./ideias-ods3/ideias-ods3.module').then( m => m.IdeiasOds3PageModule)
+  },
+  {
+    path: 'ideias-ods4',
+    loadChildren: () => import('./ideias-ods4/ideias-ods4.module').then( m => m.IdeiasOds4PageModule)
+  },
+  {
+    path: 'ideias-ods13',
+    loadChildren: () => import('./ideias-ods13/ideias-ods13.module').then( m => m.IdeiasOds13PageModule)
+  },
+  {
+    path: 'ideias-ods11',
+    loadChildren: () => import('./ideias-ods11/ideias-ods11.module').then( m => m.IdeiasOds11PageModule)
+  },
 ];
 
 @NgModule({
