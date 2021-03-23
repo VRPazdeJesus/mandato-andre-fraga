@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from  '@ionic/angular';
 
 @Component({
   selector: 'app-contato',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoPage implements OnInit {
 
-  constructor() { }
+  constructor(private nav:NavController) { }
 
   ngOnInit() {
+  }
+
+  proximo(values:any) {
+    this.nav.navigateForward('/'+values);
   }
 
 }
