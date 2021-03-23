@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'colabore',
     loadChildren: () => import('./colabore/colabore.module').then( m => m.ColaborePageModule)
   },
+  {
+    path: 'contato',
+    loadChildren: () => import('./contato/contato.module').then( m => m.ContatoPageModule)
+  },
 ];
 
 @NgModule({
