@@ -51,6 +51,10 @@ const routes: Routes = [
     path: 'contato',
     loadChildren: () => import('./contato/contato.module').then( m => m.ContatoPageModule)
   },
+  {
+    path: 'projetos-com-sociedade-civil',
+    loadChildren: () => import('./projetos-com-sociedade-civil/projetos-com-sociedade-civil.module').then( m => m.ProjetosComSociedadeCivilPageModule)
+  },
 ];
 
 @NgModule({
