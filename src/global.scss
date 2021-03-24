@@ -297,6 +297,11 @@ ion-content {
     font-weight: bold;
 }
 
+.post-link-another:hover {
+    color: var(--ion-color-warning);
+    font-weight: bold;
+}
+
 .component-footer {
     border-radius: 16px 16px 0px 0px;
     background-color: var(--ion-color-primary);
