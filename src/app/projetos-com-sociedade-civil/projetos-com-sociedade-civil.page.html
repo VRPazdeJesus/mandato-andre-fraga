@@ -1,9 +1,55 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>projetos-com-sociedade-civil</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga">
+      <button class="btn personal-btn-login" type="submit">Login</button>
+    </div>
+    <div class="container-fluid mt-2">
+      <div class="row">
+        <div class="col-3 personal-links-menu text-bottom" (click)="proximo('home')"><span class="project-text-white">Quem sou</span></div>
+        <div class="col-3 personal-links-menu" (click)="proximo('nosso-mandato')"><span class="project-text-white">Nosso Mandato</span></div>
+        <div class="col-3 personal-links-menu text-bottom component-active" (click)="proximo('colabore')"><span>Colabore</span></div>
+        <div class="col-3 personal-links-menu text-bottom" (click)="proximo('contato')"><span class="project-text-white">Contato</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('home')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/sociedade-civil.png" alt="Nosso Mandato">
+      </div>
+      <div class="col-md-12 component-bg-grey space-to-footer text-center">
+        <!-- lista de posts -->
+        <div class="mt-4 space-to-footer component-bg-trnsparent">
+          <div class="mb-3">
+            <div class="card component-bg-trnsparent no-border">
+              <img class="card-img-top" src="../../assets/post-canteiro.png" alt="canteiro" style="z-index: 1;">
+              <div class="card-body component-bg-light card-content-slide text-start" style="height: 220px; i !important">
+                <h5 class="card-title project-text-secondary fw-bold">CANTEIROS COLETIVOS</h5>
+                <p class="card-text component-text-black container-text">O movimento Canteiros Coletivos é uma iniciativa cidadã, autônoma e apartidária de recuperação de praças e canteiros abandonados da cidade de Salvador.</p>
+                <a href="#" class="post-link">Clique para saber mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- rodapé -->
+      <footer class="footer mt-auto py-3 component-footer z-index-up">
+        <!-- <div class="container">
+          <img class="w-100" src="../../assets/footer.png" alt="Redes sociais">
+        </div> -->
+        <img class="w-100" src="../../assets/footer.png" alt="Redes sociais">
+      </footer>
+    </div>
+  </div>
 </ion-content>
