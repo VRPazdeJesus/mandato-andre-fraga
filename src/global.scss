@@ -141,6 +141,10 @@ ion-content {
     padding-top: 6rem;
 }
 
+.component-space-nav-5 {
+    padding-top: 5rem;
+}
+
 .component-space-nav-8 {
     padding-top: 8rem;
 }
@@ -148,6 +152,12 @@ ion-content {
 .component-text-black {
     font-size: 1em;
     color: var(--ion-color-dark);
+    line-height: 23px;
+}
+
+.component-text-grey {
+    font-size: .75em;
+    color: var(--ion-color-tertiary);
     line-height: 23px;
 }
 
@@ -398,4 +408,9 @@ ion-content {
     border-color: var(--ion-color-primary);
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgb(77 37 108 / 25%);
+}
+
+.title-post {
+    font-size: 1.5em;
+    font-weight: bold;
 }

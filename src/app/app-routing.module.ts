@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'projetos-com-sociedade-civil',
     loadChildren: () => import('./projetos-com-sociedade-civil/projetos-com-sociedade-civil.module').then( m => m.ProjetosComSociedadeCivilPageModule)
   },
+  {
+    path: 'post',
+    loadChildren: () => import('./modals/post/post.module').then( m => m.PostPageModule)
+  },
 ];
 
 @NgModule({
