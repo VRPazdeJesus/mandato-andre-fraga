@@ -59,6 +59,10 @@ const routes: Routes = [
     path: 'post',
     loadChildren: () => import('./modals/post/post.module').then( m => m.PostPageModule)
   },
+  {
+    path: 'recupera-senha',
+    loadChildren: () => import('./recupera-senha/recupera-senha.module').then( m => m.RecuperaSenhaPageModule)
+  },
 ];
 
 @NgModule({
