@@ -8,13 +8,17 @@ import { NavController } from  '@ionic/angular';
 })
 export class RecuperaSenhaPage implements OnInit {
 
-  constructor(private nav:NavController) { }
+  response: string
+
+  constructor(private nav:NavController) {
+    this.response = 'E-mail enviado com sucesso'
+  }
 
   ngOnInit() {
   }
 
   proximo(values:any) {
-    this.nav.navigateForward('/'+values);
+    this.nav.navigateForward('/'+values)
   }
 
 }
