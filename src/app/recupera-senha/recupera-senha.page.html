@@ -30,20 +30,21 @@
       </div>
       <div class="col-md-12 component-bg-grey space-to-footer text-center">
         <h2 class="component-text-black-v2 mt-4 fw-bold">Recuperação de senha</h2>
-        <div class="mt-4 mb-4">
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label component-text-black ms-4">Informe o e-mail cadastrado</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="andre.fraga@gmai.com">
-          </div>
-          <div class="text-center">
-            <div class="mb-5 d-grid gap-2">
-              <a href="#" role="button" class="btn btn-block btn-secondary btn-colabore">Recuperar senha</a>
+          <div class="mt-4 mb-4">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label component-text-black ms-4">Informe o e-mail cadastrado</label>
+              <input [(ngModel)]="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="andre.fraga@gmai.com">
             </div>
-            <div class="d-grid gap-2">
-              <p class="component-text-black component-active fw-bold">{{response}}</p>
+            <div class="text-center">
+              <div class="mb-5 d-grid gap-2">
+                <!-- <a href="#" role="button" class="btn btn-block btn-secondary btn-colabore">Recuperar senha</a> -->
+                <button class="btn btn-block btn-secondary btn-colabore" ion-button type="submit" (click)="recoveryPassword()">Recuperar senha</button>
+              </div>
+              <div class="d-grid gap-2">
+                <p class="component-text-black component-active fw-bold">{{response}}</p>
+              </div>
             </div>
           </div>
-        </div>
       </div>
       <!-- rodapé -->
       <footer class="footer mt-auto py-3 component-footer z-index-up">

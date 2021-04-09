@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from  '@ionic/angular';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-recupera-senha',
@@ -8,13 +9,23 @@ import { NavController } from  '@ionic/angular';
 })
 export class RecuperaSenhaPage implements OnInit {
 
-  response: string
+  private email: string
+  private response: string
 
-  constructor(private nav:NavController) {
-    this.response = 'E-mail enviado com sucesso'
+  constructor(private nav:NavController, private firebaseService: FirebaseService) {
+    this.response = ''
+    this.email = ''
   }
 
   ngOnInit() {
+  }
+
+  recoveryPassword() {
+    console.log('this.email', this.email)
+    this.firebaseService.recoveryPassword(this.email).then(res => {
+      this.response = 'E-mail enviado com sucesso'
+      this.email = ''
+    });
   }
 
   proximo(values:any) {
