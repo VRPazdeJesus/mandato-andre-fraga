@@ -63,6 +63,10 @@ const routes: Routes = [
     path: 'recupera-senha',
     loadChildren: () => import('./recupera-senha/recupera-senha.module').then( m => m.RecuperaSenhaPageModule)
   },
+  {
+    path: 'colabore-dashboard',
+    loadChildren: () => import('./colabore-dashboard/colabore-dashboard.module').then( m => m.ColaboreDashboardPageModule)
+  },
 ];
 
 @NgModule({
