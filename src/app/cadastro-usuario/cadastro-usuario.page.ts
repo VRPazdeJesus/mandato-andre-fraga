@@ -44,6 +44,28 @@ export class CadastroUsuarioPage implements OnInit {
     console.log('participantAmbassadorNetwork', this.participantAmbassadorNetwork);
     console.log('password', this.password);
     console.log('confirmPassword', this.confirmPassword);
+
+    let data = {
+      name: this.name,
+      birthDate: this.birthDate,
+      telephone: this.telephone,
+      address: this.address,
+      district: this.district,
+      email: this.email,
+      socialNetwork: this.socialNetwork,
+      andreVoter: this.andreVoter,
+      participantAmbassadorNetwork: this.participantAmbassadorNetwork,
+      password: this.password
+    }
+
+    this.saveRegister(data)
+  }
+
+  saveRegister(data: any) {
+    this.firebaseService.register(data).then(res => {
+      console.log('save register res',res)
+      this.proximo('colabore-dashboard')
+    })
   }
 
 }

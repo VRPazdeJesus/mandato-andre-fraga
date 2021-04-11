@@ -10,28 +10,7 @@ export class FirebaseService {
 
   constructor(private fireauth: AngularFireAuth) { }
 
-  recoveryPassword(value: any) {
-    // return new Promise((resolve, reject) => {
-    // firebase.auth().sendPasswordResetEmail(value).then(
-    //   res => resolve(res),
-    //   err => reject(err))
-    // })
-    return new Promise((resolve, reject) => {
-      this.fireauth.sendPasswordResetEmail(value).then(
-        res => resolve(res),
-        err => reject(err))
-    })
-  }
-
-  login(emailValue: any, passwordValue: any) {
-    console.log('fiz login')
-    return new Promise((resolve, reject) => {
-      this.fireauth.signInWithEmailAndPassword(emailValue, passwordValue).then(
-        res => resolve(res),
-        err => reject(err))
-    })
-
-    // firebase.auth().signInWithEmailAndPassword(emailValue, emailValue)
+  // firebase.auth().signInWithEmailAndPassword(emailValue, emailValue)
     // .then(function(resp) {
     //     firebase.database().ref('users/').on('value', function(snapshot) {
     //         snapshot.forEach(function (childSnapshot) {
@@ -57,17 +36,31 @@ export class FirebaseService {
     //         document.getElementById("response").innerHTML = 'Senha inválida!'
     //     }
     // });
+
+  register(data: any) {
+    return new Promise((resolve, reject) => {
+      firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then(
+        res => resolve(res),
+        err => reject(err))
+    })
   }
 
-  // getLives(dia:any) {
-  //   return new Promise<any>((resolve, reject) => {
-  //     let database = firebase.database().ref(dia)
-  //     .once('value',(snap) => {
-  //       database.then(
-  //         res => resolve(snap.val()),
-  //         err => reject(err))
-  //     });      
-  //   })
-  // }
+  recoveryPassword(value: any) {
+    return new Promise((resolve, reject) => {
+      this.fireauth.sendPasswordResetEmail(value).then(
+        res => resolve(res),
+        err => reject(err))
+    })
+  }
+
+  login(emailValue: any, passwordValue: any) {
+    console.log('fiz login')
+    return new Promise((resolve, reject) => {
+      this.fireauth.signInWithEmailAndPassword(emailValue, passwordValue).then(
+        res => resolve(res),
+        err => reject(err))
+    })
+  }
+
 
 }
