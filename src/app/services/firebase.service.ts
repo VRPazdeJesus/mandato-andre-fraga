@@ -10,38 +10,26 @@ export class FirebaseService {
 
   constructor(private fireauth: AngularFireAuth) { }
 
-  // firebase.auth().signInWithEmailAndPassword(emailValue, emailValue)
-    // .then(function(resp) {
-    //     firebase.database().ref('users/').on('value', function(snapshot) {
-    //         snapshot.forEach(function (childSnapshot) {
-    //             var value = childSnapshot.val();
-    //             if(value.email == email) {
-    //                 generalName = value.username;
-    //                 document.getElementById("userName").innerHTML = 'Olá, '+value.username;
-    //             }
-    //         });
-    //     })
-    //     document.getElementById("response").innerHTML = 'Carregando....';             
-    // })
-    // .then(() => {
-    //     document.getElementById("response").innerHTML = 'Carregando..';
-    //     searchProposal();
-    // })
-    // .catch(function(error) {
-    //     if(error.code == 'auth/user-not-found') {
-    //         document.getElementById("response").innerHTML = 'Credenciais inexistentes! Por favor, registre-se!';
-    //     } else if(error.message == 'A network error (such as timeout, interrupted connection or unreachable host) has occurred.') {
-    //         document.getElementById("response").innerHTML = 'Parece que você está sem internet :(';
-    //     } else if(error.message == 'The password is invalid or the user does not have a password.') {
-    //         document.getElementById("response").innerHTML = 'Senha inválida!'
-    //     }
-    // });
-
   register(data: any) {
+    let day = new Date().toLocaleDateString('pt-br')
+
     return new Promise((resolve, reject) => {
-      firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then(
-        res => resolve(res),
-        err => reject(err))
+      firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then(() => {
+        firebase.database().ref('users/'+ data.name).set({
+          name: data.name,
+          birthDate: data.birthDate,
+          telephone: data.telephone,
+          address: data.address,
+          district: data.district,
+          email: data.email,
+          socialNetwork: data.socialNetwork,
+          andreVoter: data.andreVoter,
+          participantAmbassadorNetwork: data.participantAmbassadorNetwork,
+          dayregister: day
+        }).then(
+          res => resolve(res),
+          err => reject(err))
+      })
     })
   }
 
