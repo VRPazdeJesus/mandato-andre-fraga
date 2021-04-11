@@ -59,6 +59,36 @@
             <input [(ngModel)]="endereco" type="text" class="form-control" id="exampleFormControlInput7" placeholder="Link do facebook, instagram, etc.">
           </div>
           <div class="mb-3">
+            <label for="exampleFormControlInput7" class="form-label component-text-black ms-4">Redes sociais</label>
+            <input [(ngModel)]="endereco" type="text" class="form-control" id="exampleFormControlInput7" placeholder="Link do facebook, instagram, etc.">
+          </div>
+          <div class="mb-3 ms-4">
+            <p class="component-text-black">É eleitor de André?</p>
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="sim">
+                <label class="form-check-label component-text-black " for="inlineRadio1">Sim</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="não">
+                <label class="form-check-label component-text-black " for="inlineRadio2">Não</label>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 ms-4">
+            <p class="component-text-black">Participou da Rede de Embaixadores?</p>
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="sim">
+                <label class="form-check-label component-text-black " for="inlineRadio3">Sim</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="não">
+                <label class="form-check-label component-text-black " for="inlineRadio4">Não</label>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
             <label for="exampleFormControlInput8" class="form-label component-text-black ms-4">Senha</label>
             <input [(ngModel)]="password" type="password" class="form-control" id="exampleFormControlInput8" placeholder="Digite senha de ao menos 8 dígitos">
           </div>
@@ -66,11 +96,11 @@
             <label for="exampleFormControlInput9" class="form-label component-text-black ms-4">Confirmar senha</label>
             <input [(ngModel)]="password" type="password" class="form-control" id="exampleFormControlInput9" placeholder="Digite a mesma senha acima">
           </div>
-          <div class="mb-3 form-group form-check">
+          <div class="mb-3 form-group form-check ms-4">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label component-text-black" for="exampleCheck1">Desejo receber notícias do mandato</label>
           </div>
-          <div class="mb-3 form-group form-check">
+          <div class="mb-3 form-group form-check ms-4">
             <input type="checkbox" class="form-check-input" id="exampleCheck2">
             <label class="form-check-label component-text-black" for="exampleCheck2">Li e concordo com os termos de uso e política de privacidade. </label>
           </div>
