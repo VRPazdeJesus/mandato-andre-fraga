@@ -1,0 +1,86 @@
+<ion-content>
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga">
+      <button class="btn personal-btn-login" type="submit">Login</button>
+    </div>
+    <div class="container-fluid mt-2">
+      <div class="row">
+        <div class="col-3 personal-links-menu text-bottom" (click)="proximo('home')"><span class="project-text-white">Quem sou</span></div>
+        <div class="col-3 personal-links-menu" (click)="proximo('nosso-mandato')"><span class="project-text-white">Nosso Mandato</span></div>
+        <div class="col-3 personal-links-menu text-bottom component-active" (click)="proximo('colabore')"><span>Colabore</span></div>
+        <div class="col-3 personal-links-menu text-bottom" (click)="proximo('contato')"><span class="project-text-white">Contato</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('colabore')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/cadastro.png" alt="Cadastro de usuário">
+      </div>
+      <div class="col-md-12 component-bg-grey space-to-footer">
+        <div class="mt-4">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label component-text-black ms-4">Nome completo</label>
+            <input [(ngModel)]="nome" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Digite aqui seu nome">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label component-text-black ms-4">Data de nascimento</label>
+            <input [(ngModel)]="nascimento" type="text" class="form-control" id="exampleFormControlInput2" placeholder="Digite sua data de nascimento">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label component-text-black ms-4">Telefone</label>
+            <input [(ngModel)]="telefone" type="tel" class="form-control" id="exampleFormControlInput3" placeholder="(xx) xxxxx-xxxx">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput4" class="form-label component-text-black ms-4">Endereço</label>
+            <input [(ngModel)]="endereco" type="text" class="form-control" id="exampleFormControlInput4" placeholder="Digite sua rua">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput5" class="form-label component-text-black ms-4">Bairro</label>
+            <input [(ngModel)]="endereco" type="text" class="form-control" id="exampleFormControlInput5" placeholder="Informe o bairro que reside">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput6" class="form-label component-text-black ms-4">E-mail</label>
+            <input [(ngModel)]="email" type="email" class="form-control" id="exampleFormControlInput6" placeholder="Digite seu e-mail">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput7" class="form-label component-text-black ms-4">Redes sociais</label>
+            <input [(ngModel)]="endereco" type="text" class="form-control" id="exampleFormControlInput7" placeholder="Link do facebook, instagram, etc.">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label component-text-black ms-4">Senha</label>
+            <input [(ngModel)]="password" type="password" class="form-control" id="exampleFormControlInput2" placeholder="Digite senha de ao menos 8 dígitos">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label component-text-black ms-4">Confirmar senha</label>
+            <input [(ngModel)]="password" type="password" class="form-control" id="exampleFormControlInput2" placeholder="Digite a mesma senha acima">
+          </div>
+          <div class="text-center">
+            <div class="mb-3 d-grid gap-2">
+              <!-- <a href="#" role="button" class="btn btn-block btn-secondary btn-colabore">Login</a> -->
+              <button class="btn btn-block btn-secondary btn-colabore" ion-button (click)="login()">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- rodapé -->
+      <footer class="footer mt-auto py-3 component-footer z-index-up">
+        <!-- <div class="container">
+          <img class="w-100" src="../../assets/footer.png" alt="Redes sociais">
+        </div> -->
+        <img class="w-100" src="../../assets/footer.png" alt="Redes sociais">
+      </footer>
+    </div>
+  </div>
+</ion-content>
