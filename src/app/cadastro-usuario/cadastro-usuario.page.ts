@@ -21,7 +21,6 @@ export class CadastroUsuarioPage implements OnInit {
   private password: string
   private confirmPassword: string
 
-
   constructor(private nav:NavController, private firebaseService: FirebaseService) { }
 
   ngOnInit() {
@@ -32,19 +31,6 @@ export class CadastroUsuarioPage implements OnInit {
   }
 
   registerUser() {
-    console.log('Register user')
-    console.log('name', this.name);
-    console.log('birthDate', this.birthDate);
-    console.log('telephone', this.telephone);
-    console.log('address', this.address);
-    console.log('district', this.district);
-    console.log('email', this.email);
-    console.log('socialNetwork', this.socialNetwork);
-    console.log('andreVoter', this.andreVoter);
-    console.log('participantAmbassadorNetwork', this.participantAmbassadorNetwork);
-    console.log('password', this.password);
-    console.log('confirmPassword', this.confirmPassword);
-
     let data = {
       name: this.name,
       birthDate: this.birthDate,
@@ -63,7 +49,6 @@ export class CadastroUsuarioPage implements OnInit {
 
   saveRegister(data: any) {
     this.firebaseService.register(data).then(res => {
-      console.log('save register res',res)
       this.proximo('colabore-dashboard')
     })
   }
