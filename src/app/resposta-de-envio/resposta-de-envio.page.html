@@ -1,0 +1,51 @@
+<ion-content>
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Sair</button>
+    </div>
+    <div class="container-fluid mt-2 force-center">
+      <div class="row">
+        <div class="col-12 personal-titles-menu component-active mt-2"><span>{{ dataResponse.titlePage }}</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('nosso-mandato')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/43-ideias.png" alt="Ideias para Salvador">
+      </div> -->
+      <div class="col-md-12 space-to-footer">
+        <p [class]="dataResponse.sucessResponse === true ? 'component-text-success mt-4' : 'component-text-danger mt-4'">{{ dataResponse.titleContent }}</p>
+        <p class="component-text-black mt-4">{{ dataResponse.descriptionContent }}</p>
+        <div class="row mt-5 mb-5">
+          <div class="col-12 text-center">
+            <img [src]="dataResponse.sucessResponse === true ? '../../assets/icon-toca-aqui.png' : '../../assets/icone-negativo.png'" alt="ícone do conteúdo">
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-6 text-center">
+            <button type="button" class="btn btn-light-green btn-response fw-bold" (click)="proximo('colabore')">Outra colaboração</button>
+          </div>
+          <div class="col-6 text-center">
+            <button type="button" class="btn btn-secondary btn-response fw-bold" (click)="proximo(dataResponse.pageURL)">Novo projeto</button>
+          </div>
+        </div>
+      </div>
+      <!-- rodapé -->
+      <footer class="footer mt-auto py-3 component-footer z-index-up">
+        <img class="w-100" src="../../assets/footer.png" alt="Redes sociais">
+      </footer>
+    </div>
+  </div>
+</ion-content>

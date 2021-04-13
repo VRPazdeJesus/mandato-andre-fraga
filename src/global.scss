@@ -80,8 +80,14 @@ ion-content {
 
 .btn-secondary {
     color: #fff;
-    background-color: #006116;;
-    border-color: #006116;;
+    background-color: #006116;
+    border-color: #006116;
+}
+
+.btn-light-green {
+    color: #006116;
+    background-color: #fff;
+    border-color: #006116;
 }
 
 .personal-navbar-nav {
@@ -165,6 +171,20 @@ ion-content {
     font-size: .75em;
     color: var(--ion-color-tertiary);
     line-height: 23px;
+}
+
+.component-text-success {
+    font-size: 1.25em;
+    color: var(--ion-color-success);
+    line-height: 23px;
+    font-weight: bold;
+}
+
+.component-text-danger {
+    font-size: 1.25em;
+    color: var(--ion-color-danger);
+    line-height: 23px;
+    font-weight: bold;
 }
 
 .component-btn-round {
@@ -345,6 +365,13 @@ ion-content {
     border-radius: 2.5rem;
     padding: 1rem 1rem 1rem 1.5rem;
     box-shadow: 3px 5px 0px 0.1em rgb(77 37 108);
+}
+
+.btn-response {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    width: 100%;
+    border-radius: 1.2rem;
 }
 
 .z-index-up {
