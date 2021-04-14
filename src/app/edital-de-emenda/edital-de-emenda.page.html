@@ -1,0 +1,58 @@
+<ion-content>
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Sair</button>
+    </div>
+    <div class="container-fluid mt-2 force-center">
+      <div class="row">
+        <div class="col-12 personal-titles-menu component-active mt-2"><span>EDITAL DE EMENDAS</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('colabore')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/edital-de-emendas.png" alt="Sugerir projetos de lei">
+      </div>
+      <div class="col-md-12 component-bg-grey space-to-footer">
+        <div class="mt-4">
+          <p class="component-text-black">Todos os anos, os vereadores têm direito a uma quantia do Orçamento Público Municipal cuja alocação fica a critério de cada um.</p>
+          <p class="component-text-black">Com o propósito de construir uma política mais sustentável, colaborativa e transparente, destinarei os recursos previstos para as emendas parlamentares individuais por meio de edital, no qual os critérios de escolha envolverão aspectos técnicos e não favoritismo político.</p>
+          <p class="component-text-black">Confira abaixo o Edital de Emendas 2021:</p>
+          <div class="row mb-5">
+            <div class="col-12">
+              <div style="width: 350px; height: 200px; background-image: url(../../assets/img-edital.png); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; border-radius: 16px;">
+                <div style="position: relative; width: 350px; height: 200px; background: linear-gradient(180deg, rgba(77, 37, 108, 0.13) 0%, rgba(77, 37, 108, 0.58) 100%); border-radius: 16px;">
+                  <h2 style="margin-left: 16px; position: absolute; bottom: 0; left: 0;">EDITAL DE EMENDAS</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="mb-3 d-grid gap-2">
+              <button class="btn btn-block btn-secondary btn-colabore" ion-button (click)="sendProposal()">Inscreva seu projeto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- rodapé -->
+      <footer class="footer mt-auto py-3 component-footer z-index-up">
+        <!-- <div class="container">
+          <img class="w-100" src="../../assets/footer.png" alt="Redes sociais">
+        </div> -->
+        <img class="w-100" src="../../assets/footer.png" alt="Redes sociais">
+      </footer>
+    </div>
+  </div>
+</ion-content>

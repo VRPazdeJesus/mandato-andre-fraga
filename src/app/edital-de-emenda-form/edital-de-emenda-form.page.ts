@@ -2,17 +2,15 @@ import { Component, OnInit } from '@angular/core'
 import { NavController } from  '@ionic/angular'
 
 @Component({
-  selector: 'app-sugerir-projeto-de-leis',
-  templateUrl: './sugerir-projeto-de-leis.page.html',
-  styleUrls: ['./sugerir-projeto-de-leis.page.scss'],
+  selector: 'app-edital-de-emenda-form',
+  templateUrl: './edital-de-emenda-form.page.html',
+  styleUrls: ['./edital-de-emenda-form.page.scss'],
 })
-export class SugerirProjetoDeLeisPage implements OnInit {
+export class EditalDeEmendaFormPage implements OnInit {
 
-  tituloDaLei: string
-  categoriaDaLei: string
+  tituloDoProjeto: string
+  categoriaDoProjeto: string
   resumoDaSolicitacao: string
-  fileName: string
-
   categories = [
     'Acessibilidade e Cidadania',
     'Administração e Gestão de Pessoa',
@@ -42,14 +40,17 @@ export class SugerirProjetoDeLeisPage implements OnInit {
     'Utilidade Pública',
     'Outros'
   ]
+  bairroDoProjeto: string
+  entidadeDoProjeto: string
+  valorDoProjeto: string
 
-  fileToUpload: File = null;
-
-  constructor(private nav:NavController) {
-    this.tituloDaLei = ''
-    this.categoriaDaLei = 'Selecione a categoria'
+  constructor(private nav:NavController) { 
+    this.tituloDoProjeto = ''
+    this.categoriaDoProjeto = 'Selecione a categoria'
     this.resumoDaSolicitacao = ''
-    this.fileName = ''
+    this.bairroDoProjeto = ''
+    this.entidadeDoProjeto = ''
+    this.valorDoProjeto = ''
   }
 
   ngOnInit() {
@@ -59,17 +60,14 @@ export class SugerirProjetoDeLeisPage implements OnInit {
     this.nav.navigateForward('/'+values)
   }
 
-  handleFileInput(files: FileList) {
-    this.fileToUpload = files.item(0);
-    console.log('this.fileToUpload', this.fileToUpload)
-  }
-
   sendProposal() {
+    this.tituloDoProjeto = ''
     console.log("Enviando proposta")
-    this.tituloDaLei = ''
-    this.categoriaDaLei = 'Selecione a categoria'
+    this.categoriaDoProjeto = 'Selecione a categoria'
     this.resumoDaSolicitacao = ''
-    this.fileName = ''
+    this.bairroDoProjeto = ''
+    this.entidadeDoProjeto = ''
+    this.valorDoProjeto = ''
     this.proximo('resposta-de-envio')
   }
 

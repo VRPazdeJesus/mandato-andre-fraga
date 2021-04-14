@@ -71,6 +71,26 @@ const routes: Routes = [
     path: 'cadastro-usuario',
     loadChildren: () => import('./cadastro-usuario/cadastro-usuario.module').then( m => m.CadastroUsuarioPageModule)
   },
+  {
+    path: 'fazer-denuncia',
+    loadChildren: () => import('./fazer-denuncia/fazer-denuncia.module').then( m => m.FazerDenunciaPageModule)
+  },
+  {
+    path: 'sugerir-projeto-de-leis',
+    loadChildren: () => import('./sugerir-projeto-de-leis/sugerir-projeto-de-leis.module').then( m => m.SugerirProjetoDeLeisPageModule)
+  },
+  {
+    path: 'edital-de-emenda',
+    loadChildren: () => import('./edital-de-emenda/edital-de-emenda.module').then( m => m.EditalDeEmendaPageModule)
+  },
+  {
+    path: 'resposta-de-envio',
+    loadChildren: () => import('./resposta-de-envio/resposta-de-envio.module').then( m => m.RespostaDeEnvioPageModule)
+  },
+  {
+    path: 'edital-de-emenda-form',
+    loadChildren: () => import('./edital-de-emenda-form/edital-de-emenda-form.module').then( m => m.EditalDeEmendaFormPageModule)
+  },
 ];
 
 @NgModule({
