@@ -29,7 +29,10 @@
         <div class="mt-4">
           <div class="mb-3">
             <label for="exampleFormControlInput0" class="form-label component-text-black ms-4">Fazer upload de foto da denúncia</label>
-            <input [(ngModel)]="fotoDenuncia" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput0" placeholder="Anexar documento (opcional)">
+            <label for="exampleFormControlInput0" class="form-control" style="height: 200px; display: flex; justify-content: center; align-items: center;">
+              <img src="../../assets/icon-camera.png" alt="ícone de câmera">
+              <input [(ngModel)]="fotoDenuncia" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput0">
+            </label>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label component-text-black ms-4">Título da Denúncia</label>
@@ -45,7 +48,21 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput4" class="form-label component-text-black ms-4">Anexo</label>
-            <input [(ngModel)]="fileName" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput4" placeholder="Anexar documento (opcional)">
+            <!-- <label for="exampleFormControlInput4" class="form-control file-custom" style="height: 3.5rem; display: flex; justify-content: flex-end; align-items: center;"> -->
+            <label for="exampleFormControlInput4" class="form-control file-custom" style="height: 3.5rem; display: flex; align-items: center;">
+              <p class="m-0 pe-5" style="color:#7e868c">Anexar documento (opcional)</p>
+              <input [(ngModel)]="fileName" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput4">
+              <img src="../../assets/icone-anexo.png" alt="ícone de câmera">
+              <!-- <div class="row">
+                <div class="col-9">
+                  <p>Anexar documento (opcional)</p>
+                  <input [(ngModel)]="fileName" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput4" placeholder="Anexar documento (opcional)">
+                </div>
+                <div class="col-3">
+                  <img src="../../assets/icone-anexo.png" alt="ícone de câmera">
+                </div>
+              </div> -->
+            </label>
           </div>
           <div class="mb-5">
             <label for="exampleFormControlInput3" class="form-label component-text-black ms-4">Detalhes da denúncia</label>

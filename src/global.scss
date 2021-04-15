@@ -447,3 +447,7 @@ ion-content {
     font-size: 1.5em;
     font-weight: bold;
 }
+
+label input[type="file"] {
+    display: none;
+}
