@@ -4,36 +4,6 @@
     <div class="container-fluid">
       <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga">
       <button class="btn personal-btn-login" (click)="proximo('colabore')">Login</button>
-      
-
-      <!-- <div class="row" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div> -->
     </div>
     <div class="container-fluid mt-2">
       <div class="row">
@@ -67,14 +37,24 @@
       <p class="component-text-black">Exerci o cargo de Secretário de Sustentabilidade, Inovação e Resiliência de Salvador de 2014 até março de 2020, quando saí para me candidatar ao cargo de vereador. Fui eleito nas eleições municipais 2020 com 5.621 votos.</p>
       <p class="component-text-black">Também sou vice-presidente da Sociedade Brasileira de Arborização Urbana, líder da Rede de Ação Política pela Sustentabilidade (RAPS) e aluno no RenovaBR Cidades – escola que prepara e forma pessoas comuns para serem políticos fora do comum. </p>
       <p class="component-text-black">Muitos dos projetos idealizados e liderados por mim foram premiados nacional e internacionalmente, fazendo de Salvador uma referência global em sustentabilidade.</p>
-      <img src="../../assets/all-logos.png" alt="logos">
+      <div class="row">
+        <div class="col-4 v-center-h-center ">
+          <img src="../../assets/raps.png" alt="logos">
+        </div>
+        <div class="col-4 v-center-h-center ">
+          <img src="../../assets/renovabr.png" alt="logos">
+        </div>
+        <div class="col-4 v-center-h-center ">
+          <img src="../../assets/partido-verde.png" alt="logos">
+        </div>
+      </div>
     </div>
   </div>
   <!-- valores -->
   <div class="mt-5">
     <!-- foto valores -->
     <div id="img-card">
-      <img src="../../assets/valores-andre-fraga.png" alt="Vereador André Fraga">
+      <img class="w-100" src="../../assets/valores-andre-fraga.png" alt="Vereador André Fraga">
     </div>
     <!-- conteúdo -->
     <div class="component-bg-secondary">
@@ -84,24 +64,28 @@
           <img src="../../assets/valores.png" alt="Logo de Valores">
         </div>
         <!-- cards -->
-        <!-- transparencia -->
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <!-- header -->
-            <div class="accordion-header" id="headingTwo">
-              <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <div class="row">
-                  <!-- header -->
-                  <div class="col-md-12">
-                    <span class="component-space-icon"><img src="../../assets/valores-icons/transparencia.png" alt="ícone de gráfico"></span><span class="title-modal">TRANSPARÊNCIA</span>
-                  </div>
-                  <!-- content -->
-                  <div class="col-md-12">
-                    <div id="collapseTwo" class="no-border accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                      <div class="accordion-body p-0">
-                        <p class="title-inside-modal mt-2 mb-2">Transparência</p>
-                        <hr class="component-hr">
-                        <p class="content-inside-modal">Prestar contas, falar a verdade e eliminar filtros que servem como barreiras para o acompanhamento pela sociedade da atuação pública.</p>
+        <div class="row">
+          <!-- transparencia -->
+          <div class="col-12 col-md-4">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <!-- header -->
+                <div class="accordion-header" id="headingTwo">
+                  <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="row">
+                      <!-- header -->
+                      <div class="col-md-12">
+                        <span class="component-space-icon"><img src="../../assets/valores-icons/transparencia.png" alt="ícone de gráfico"></span><span class="title-modal">TRANSPARÊNCIA</span>
+                      </div>
+                      <!-- content -->
+                      <div class="col-md-12">
+                        <div id="collapseTwo" class="no-border accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div class="accordion-body p-0">
+                            <p class="title-inside-modal mt-2 mb-2">Transparência</p>
+                            <hr class="component-hr">
+                            <p class="content-inside-modal">Prestar contas, falar a verdade e eliminar filtros que servem como barreiras para o acompanhamento pela sociedade da atuação pública.</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -109,25 +93,27 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- colaboração -->
-        <div class="accordion" id="accordionExample2">
-          <div class="accordion-item">
-            <!-- header -->
-            <div class="accordion-header" id="headingThree">
-              <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <div class="row">
-                  <!-- header -->
-                  <div class="col-md-12">
-                    <span class="component-space-icon"><img src="../../assets/valores-icons/colaboracao.png" alt="ícone de gráfico"></span><span class="title-modal">COLABORAÇÃO</span>
-                  </div>
-                  <!-- content -->
-                  <div class="col-md-12">
-                    <div id="collapseThree" class="no-border accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
-                      <div class="accordion-body p-0">
-                        <p class="title-inside-modal mt-2 mb-2">Colaboração</p>
-                        <hr class="component-hr">
-                        <p class="content-inside-modal">Engajar pessoas para construir um projeto político através da participação ativa e qualificada.</p>
+          <!-- colaboração -->
+          <div class="col-12 col-md-4">
+            <div class="accordion" id="accordionExample2">
+              <div class="accordion-item">
+                <!-- header -->
+                <div class="accordion-header" id="headingThree">
+                  <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <div class="row">
+                      <!-- header -->
+                      <div class="col-md-12">
+                        <span class="component-space-icon"><img src="../../assets/valores-icons/colaboracao.png" alt="ícone de gráfico"></span><span class="title-modal">COLABORAÇÃO</span>
+                      </div>
+                      <!-- content -->
+                      <div class="col-md-12">
+                        <div id="collapseThree" class="no-border accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
+                          <div class="accordion-body p-0">
+                            <p class="title-inside-modal mt-2 mb-2">Colaboração</p>
+                            <hr class="component-hr">
+                            <p class="content-inside-modal">Engajar pessoas para construir um projeto político através da participação ativa e qualificada.</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -135,25 +121,27 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- sustentabilidade -->
-        <div class="accordion" id="accordionExample3">
-          <div class="accordion-item">
-            <!-- header -->
-            <div class="accordion-header" id="headingFour">
-              <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                <div class="row">
-                  <!-- header -->
-                  <div class="col-md-12">
-                    <span class="component-space-icon"><img src="../../assets/valores-icons/sustentabilidade.png" alt="ícone de gráfico"></span><span class="title-modal">SUSTENTABILIDADE</span>
-                  </div>
-                  <!-- content -->
-                  <div class="col-md-12">
-                    <div id="collapseFour" class="no-border accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample3">
-                      <div class="accordion-body p-0">
-                        <p class="title-inside-modal mt-2 mb-2">Sustentabilidade</p>
-                        <hr class="component-hr">
-                        <p class="content-inside-modal">Propor políticas públicas que supram as necessidades atuais da população, sem colocar em risco o futuro das próximas gerações, equilibrando as dimensões econômica, ambiental e social.</p>
+          <!-- sustentabilidade -->
+          <div class="col-12 col-md-4">
+            <div class="accordion" id="accordionExample3">
+              <div class="accordion-item">
+                <!-- header -->
+                <div class="accordion-header" id="headingFour">
+                  <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <div class="row">
+                      <!-- header -->
+                      <div class="col-md-12">
+                        <span class="component-space-icon"><img src="../../assets/valores-icons/sustentabilidade.png" alt="ícone de gráfico"></span><span class="title-modal">SUSTENTABILIDADE</span>
+                      </div>
+                      <!-- content -->
+                      <div class="col-md-12">
+                        <div id="collapseFour" class="no-border accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample3">
+                          <div class="accordion-body p-0">
+                            <p class="title-inside-modal mt-2 mb-2">Sustentabilidade</p>
+                            <hr class="component-hr">
+                            <p class="content-inside-modal">Propor políticas públicas que supram as necessidades atuais da população, sem colocar em risco o futuro das próximas gerações, equilibrando as dimensões econômica, ambiental e social.</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -161,25 +149,27 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- renovação -->
-        <div class="accordion" id="accordionExample5">
-          <div class="accordion-item">
-            <!-- header -->
-            <div class="accordion-header" id="headingFive">
-              <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                <div class="row">
-                  <!-- header -->
-                  <div class="col-md-12">
-                    <span class="component-space-icon"><img src="../../assets/valores-icons/renovacao.png" alt="ícone de gráfico"></span><span class="title-modal">RENOVAÇÃO</span>
-                  </div>
-                  <!-- content -->
-                  <div class="col-md-12">
-                    <div id="collapseFive" class="no-border accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample5">
-                      <div class="accordion-body p-0">
-                        <p class="title-inside-modal mt-2 mb-2">Renovação</p>
-                        <hr class="component-hr">
-                        <p class="content-inside-modal">Fazer da política institucional um espaço de constante renovação, através da formação de novas lideranças e a eliminação de sucessivas reeleições para funções eletivas.</p>
+          <!-- renovação -->
+          <div class="col-12 col-md-4">
+            <div class="accordion" id="accordionExample5">
+              <div class="accordion-item">
+                <!-- header -->
+                <div class="accordion-header" id="headingFive">
+                  <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <div class="row">
+                      <!-- header -->
+                      <div class="col-md-12">
+                        <span class="component-space-icon"><img src="../../assets/valores-icons/renovacao.png" alt="ícone de gráfico"></span><span class="title-modal">RENOVAÇÃO</span>
+                      </div>
+                      <!-- content -->
+                      <div class="col-md-12">
+                        <div id="collapseFive" class="no-border accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample5">
+                          <div class="accordion-body p-0">
+                            <p class="title-inside-modal mt-2 mb-2">Renovação</p>
+                            <hr class="component-hr">
+                            <p class="content-inside-modal">Fazer da política institucional um espaço de constante renovação, através da formação de novas lideranças e a eliminação de sucessivas reeleições para funções eletivas.</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -187,25 +177,27 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- inovação -->
-        <div class="accordion" id="accordionExample6">
-          <div class="accordion-item">
-            <!-- header -->
-            <div class="accordion-header" id="headingSix">
-              <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                <div class="row">
-                  <!-- header -->
-                  <div class="col-md-12">
-                    <span class="component-space-icon"><img src="../../assets/valores-icons/inovacao.png" alt="ícone de gráfico"></span><span class="title-modal">INOVAÇÃO</span>
-                  </div>
-                  <!-- content -->
-                  <div class="col-md-12">
-                    <div id="collapseSix" class="no-border accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample6">
-                      <div class="accordion-body p-0">
-                        <p class="title-inside-modal mt-2 mb-2">Inovação</p>
-                        <hr class="component-hr">
-                        <p class="content-inside-modal">Buscar permanentemente vencer barreiras para colocar a Política na rota da inovação, consolidando a democracia e a participação colaborativa cidadã.</p>
+          <!-- inovação -->
+          <div class="col-12 col-md-4">
+            <div class="accordion" id="accordionExample6">
+              <div class="accordion-item">
+                <!-- header -->
+                <div class="accordion-header" id="headingSix">
+                  <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <div class="row">
+                      <!-- header -->
+                      <div class="col-md-12">
+                        <span class="component-space-icon"><img src="../../assets/valores-icons/inovacao.png" alt="ícone de gráfico"></span><span class="title-modal">INOVAÇÃO</span>
+                      </div>
+                      <!-- content -->
+                      <div class="col-md-12">
+                        <div id="collapseSix" class="no-border accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample6">
+                          <div class="accordion-body p-0">
+                            <p class="title-inside-modal mt-2 mb-2">Inovação</p>
+                            <hr class="component-hr">
+                            <p class="content-inside-modal">Buscar permanentemente vencer barreiras para colocar a Política na rota da inovação, consolidando a democracia e a participação colaborativa cidadã.</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -213,25 +205,27 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- empatia -->
-        <div class="accordion" id="accordionExample7">
-          <div class="accordion-item">
-            <!-- header -->
-            <div class="accordion-header" id="headingSeven">
-              <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                <div class="row">
-                  <!-- header -->
-                  <div class="col-md-12">
-                    <span class="component-space-icon"><img src="../../assets/valores-icons/empatia.png" alt="ícone de gráfico"></span><span class="title-modal">EMPATIA</span>
-                  </div>
-                  <!-- content -->
-                  <div class="col-md-12">
-                    <div id="collapseSeven" class="no-border accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample7">
-                      <div class="accordion-body p-0">
-                        <p class="title-inside-modal mt-2 mb-2">Empatia</p>
-                        <hr class="component-hr">
-                        <p class="content-inside-modal">Compreender os anseios e perspectivas dos grupos que compõem a sociedade a partir do lugar que eles ocupam.</p>
+          <!-- empatia -->
+          <div class="col-12 col-md-4">
+            <div class="accordion" id="accordionExample7">
+              <div class="accordion-item">
+                <!-- header -->
+                <div class="accordion-header" id="headingSeven">
+                  <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <div class="row">
+                      <!-- header -->
+                      <div class="col-md-12">
+                        <span class="component-space-icon"><img src="../../assets/valores-icons/empatia.png" alt="ícone de gráfico"></span><span class="title-modal">EMPATIA</span>
+                      </div>
+                      <!-- content -->
+                      <div class="col-md-12">
+                        <div id="collapseSeven" class="no-border accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample7">
+                          <div class="accordion-body p-0">
+                            <p class="title-inside-modal mt-2 mb-2">Empatia</p>
+                            <hr class="component-hr">
+                            <p class="content-inside-modal">Compreender os anseios e perspectivas dos grupos que compõem a sociedade a partir do lugar que eles ocupam.</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -239,25 +233,27 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- pluradidade -->
-        <div class="accordion" id="accordionExample8">
-          <div class="accordion-item">
-            <!-- header -->
-            <div class="accordion-header" id="headingEight">
-              <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                <div class="row">
-                  <!-- header -->
-                  <div class="col-md-12">
-                    <span class="component-space-icon"><img src="../../assets/valores-icons/pluralidade.png" alt="ícone de gráfico"></span><span class="title-modal">PLURALIDADE</span>
-                  </div>
-                  <!-- content -->
-                  <div class="col-md-12">
-                    <div id="collapseEight" class="no-border accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample8">
-                      <div class="accordion-body p-0">
-                        <p class="title-inside-modal mt-2 mb-2">Pluralidade</p>
-                        <hr class="component-hr">
-                        <p class="content-inside-modal">Garantir a diversidade de ideias, opiniões e vivências para a construção de políticas públicas que atendam as particularidades da comunidade.</p>
+          <!-- pluradidade -->
+          <div class="col-12 col-md-4">
+            <div class="accordion" id="accordionExample8">
+              <div class="accordion-item">
+                <!-- header -->
+                <div class="accordion-header" id="headingEight">
+                  <div class="accordion-button collapsed mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    <div class="row">
+                      <!-- header -->
+                      <div class="col-md-12">
+                        <span class="component-space-icon"><img src="../../assets/valores-icons/pluralidade.png" alt="ícone de gráfico"></span><span class="title-modal">PLURALIDADE</span>
+                      </div>
+                      <!-- content -->
+                      <div class="col-md-12">
+                        <div id="collapseEight" class="no-border accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample8">
+                          <div class="accordion-body p-0">
+                            <p class="title-inside-modal mt-2 mb-2">Pluralidade</p>
+                            <hr class="component-hr">
+                            <p class="content-inside-modal">Garantir a diversidade de ideias, opiniões e vivências para a construção de políticas públicas que atendam as particularidades da comunidade.</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -286,59 +282,68 @@
               <p class="project-text-white">Sendo assim, as nossas ideias para Salvador estão alinhadas a esses objetivos. Para isso, quatro ODS serão priorizados, são eles:</p>
             </div>
             <!-- cards -->
-            <!-- ods3 -->
-            <div class="text-center mb-3">
-              <div class="card component-card-title">
-                <div class="component-card-body project-text-white">
-                  ODS 3 - Saúde e Bem-estar
+            <div class="row">
+              <!-- ods3 -->
+              <div class="col-12 col-md-6">
+                <div class="text-center mb-3">
+                  <div class="card component-card-title">
+                    <div class="component-card-body project-text-white">
+                      ODS 3 - Saúde e Bem-estar
+                    </div>
+                  </div>
+                  <div class="card component-card-content">
+                    <div class="card-body text-center">
+                      <p class="mt-4 component-text-black">Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="card component-card-content">
-                <div class="card-body text-center">
-                  <p class="mt-4 component-text-black">Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades.</p>
+              <!-- ods4 -->
+              <div class="col-12 col-md-6">
+                <div class="text-center mb-3">
+                  <div class="card component-card-title">
+                    <div class="component-card-body project-text-white">
+                      ODS 4 - Educação de qualidade
+                    </div>
+                  </div>
+                  <div class="card component-card-content">
+                    <div class="card-body text-center">
+                      <p class="mt-4 component-text-black">Assegurar a educação inclusiva e equitativa de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ods11 -->
+              <div class="col-12 col-md-6">
+                <div class="text-center mb-3">
+                  <div class="card component-card-title">
+                    <div class="component-card-body project-text-white">
+                      ODS 11 - Cidades sustentáveis
+                    </div>
+                  </div>
+                  <div class="card component-card-content">
+                    <div class="card-body text-center">
+                      <p class="mt-4 component-text-black">Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ods13 -->
+              <div class="col-12 col-md-6">
+                <div class="text-center mb-3">
+                  <div class="card component-card-title">
+                    <div class="component-card-body project-text-white">
+                      ODS 13 - Mudança do clima
+                    </div>
+                  </div>
+                  <div class="card component-card-content">
+                    <div class="card-body text-center">
+                      <p class="mt-4 component-text-black">Tomar medidas urgentes para combater a mudança do clima e seus impactos.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- ods4 -->
-            <div class="text-center mb-3">
-              <div class="card component-card-title">
-                <div class="component-card-body project-text-white">
-                  ODS 4 - Educação de qualidade
-                </div>
-              </div>
-              <div class="card component-card-content">
-                <div class="card-body text-center">
-                  <p class="mt-4 component-text-black">Assegurar a educação inclusiva e equitativa de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos.</p>
-                </div>
-              </div>
-            </div>
-            <!-- ods11 -->
-            <div class="text-center mb-3">
-              <div class="card component-card-title">
-                <div class="component-card-body project-text-white">
-                  ODS 11 - Cidades sustentáveis
-                </div>
-              </div>
-              <div class="card component-card-content">
-                <div class="card-body text-center">
-                  <p class="mt-4 component-text-black">Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.</p>
-                </div>
-              </div>
-            </div>
-            <!-- ods13 -->
-            <div class="text-center mb-3">
-              <div class="card component-card-title">
-                <div class="component-card-body project-text-white">
-                  ODS 13 - Mudança do clima
-                </div>
-              </div>
-              <div class="card component-card-content">
-                <div class="card-body text-center">
-                  <p class="mt-4 component-text-black">Tomar medidas urgentes para combater a mudança do clima e seus impactos.</p>
-                </div>
-              </div>
-            </div>
-
           </div>
           <!-- foto comissões -->
           <div id="img-card" class="mt-5">
@@ -354,16 +359,16 @@
               <!-- comissões -->
               <div class="mt-3 component-p-space">
                 <div class="row text-center">
-                  <div class="col-md-12">
+                  <div class="col-12 col-md-6">
                     <img src="../../assets/teste-climaticas.png" alt="ícone de gráfico">
                   </div>
-                  <div class="col-md-12 mt-3">
+                  <div class="col-12 col-md-6 mt-3">
                     <img src="../../assets/teste-urbanas.png" alt="ícone de gráfico">
                   </div>
-                  <div class="col-md-12 mt-3">
+                  <div class="col-12 col-md-6 mt-3">
                     <img src="../../assets/teste-legislativo.png" alt="ícone de gráfico">
                   </div>
-                  <div class="col-md-12 mt-3">
+                  <div class="col-12 col-md-6 mt-3">
                     <img src="../../assets/teste-cultura.png" alt="ícone de gráfico">
                   </div>
                 </div>
@@ -418,9 +423,56 @@
   </div>
   <!-- rodapé -->
   <footer class="footer mt-auto py-3 component-footer">
-    <!-- <div class="container">
-      <img class="w-100" src="../../assets/footer.png" alt="Redes sociais">
-    </div> -->
-    <img class="w-100" src="../../assets/footer.png" alt="Redes sociais">
+    <div class="container">
+      <div class="row">
+        <!-- titulo -->
+        <div class="col-12 text-center">
+          <h6 class="project-text-white">ME SEGUE LÁ</h6>
+        </div>
+        <!-- ícones -->
+        <div class="col-12 text-center inline-father">
+          <a href="https://twitter.com/euandrefraga" target="_blank">
+            <div class="inline-child space-icon">
+              <img src="../../assets/icon-twitter.png" alt="Twitter">
+            </div>
+          </a>
+          <a href="https://www.facebook.com/euandrefraga" target="_blank">
+            <div class="inline-child space-icon">
+              <img src="../../assets/icon-facebook.png" alt="Facebook">
+            </div>
+          </a>
+          <a href="https://www.instagram.com/euandrefraga/" target="_blank">
+            <div class="inline-child space-icon">
+              <img src="../../assets/icon-instagram.png" alt="Instagram">
+            </div>
+          </a>
+          <a href="https://www.youtube.com/channel/UC7BSLZW3MscGlXvc1dpHekA" target="_blank">
+            <div class="inline-child space-icon">
+              <img src="../../assets/icon-youtube.png" alt="YouTube">
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/andr%C3%A9-fraga-b7b15434" target="_blank">
+            <div class="inline-child">
+              <img src="../../assets/icon-linkedin.png" alt="Linkedin">
+            </div>
+          </a>
+        </div>
+        <!-- divisor -->
+        <div class="col-12">
+          <hr class="footer-hr mt-4">
+        </div>
+        <!-- contato -->
+        <div class="col-12">
+          <p class="project-text-white fw-bold mb-1">ENTRE EM CONTATO</p>
+          <p class="project-text-white mb-0 txt-300">E-mail: andrefraga@cms.ba.gov</p>
+          <p class="project-text-white mb-0 txt-300">Telefone: 71 9 9318-4941</p>
+          <p class="project-text-white txt-300">Endereço: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
+        </div>
+        <!-- titulo -->
+        <div class="col-12 text-center">
+          <h6 class="project-text-white">ANDRÉ FRAGA. TODOS OS DIREITOS RESERVADOS | 2021</h6>
+        </div>
+      </div>
+    </div>
   </footer>
 </ion-content>
