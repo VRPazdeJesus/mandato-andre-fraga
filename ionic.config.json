@@ -1,7 +1,8 @@
 {
   "name": "mandato-andre-fraga",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
