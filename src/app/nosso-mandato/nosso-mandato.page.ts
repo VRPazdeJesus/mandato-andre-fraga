@@ -11,6 +11,7 @@ export class NossoMandatoPage implements OnInit {
 
   private textContent: string
   private content: any
+  private loading = false
 
   constructor(private nav:NavController, private firebaseService: FirebaseService) { 
     this.getContentPage()
@@ -23,6 +24,7 @@ export class NossoMandatoPage implements OnInit {
       this.content = res
     }).then(() => {
       this.textContent = this.content.contentOne.split(/\\n/g)
+      this.loading = true
     })
   }
 
