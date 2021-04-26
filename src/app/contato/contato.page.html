@@ -28,33 +28,18 @@
       <div class="col-md-12 text-center mt-3">
         <img src="../../assets/contato.png" alt="Nosso Mandato">
       </div>
-      <div class="col-md-12 component-bg-grey space-to-footer">
-        <!-- oficial screen -->
-        <div *ngIf="loading">
-          <p *ngFor="let text of textContent" class="component-text-black mt-4">{{ text }}</p>
-        </div>
-        <!-- skeleton screen -->
-        <div *ngIf="!loading">
-          <div class="ion-padding custom-skeleton">
-            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
-            <ion-skeleton-text animated></ion-skeleton-text>
-            <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
-            <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
-            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
-          </div>
-        </div>
-        <div class="mt-4">
+    </div>
+  </div>
+  <div class="component-bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 space-to-footer">
           <!-- oficial screen -->
-          <div *ngIf="loading" class="row">
-            <div class="col-2">
-              <img class="w-100" src="../../assets/icone-localizacao.png" alt="Localização">
-            </div>
-            <div class="col-10">
-              <p class="component-text-black fw-bold">{{ address }}</p>
-            </div>
+          <div *ngIf="loading">
+            <p *ngFor="let text of textContent" class="component-text-black mt-4">{{ text }}</p>
           </div>
           <!-- skeleton screen -->
-          <div *ngIf="!loading" class="row">
+          <div *ngIf="!loading">
             <div class="ion-padding custom-skeleton">
               <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
               <ion-skeleton-text animated></ion-skeleton-text>
@@ -63,84 +48,105 @@
               <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
             </div>
           </div>
-          <!-- oficial screen -->
-          <div *ngIf="loading" class="row">
-            <div class="col-2">
-              <img class="w-100" src="../../assets/icone-email.png" alt="Email">
+          <div class="mt-4">
+            <!-- oficial screen -->
+            <div *ngIf="loading" class="row">
+              <div class="col-2">
+                <img class="w-100 resize-30" src="../../assets/icone-localizacao.png" alt="Localização">
+              </div>
+              <div class="col-10">
+                <p class="component-text-black fw-bold">{{ address }}</p>
+              </div>
             </div>
-            <div class="col-10">
-              <p *ngFor="let textEmail of email" class="component-text-black fw-bold mt-0 mb-0">{{ textEmail }}</p>
+            <!-- skeleton screen -->
+            <div *ngIf="!loading" class="row">
+              <div class="ion-padding custom-skeleton">
+                <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                <ion-skeleton-text animated></ion-skeleton-text>
+                <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+                <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+                <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+              </div>
+            </div>
+            <!-- oficial screen -->
+            <div *ngIf="loading" class="row">
+              <div class="col-2">
+                <img class="w-100 resize-30" src="../../assets/icone-email.png" alt="Email">
+              </div>
+              <div class="col-10">
+                <p *ngFor="let textEmail of email" class="component-text-black fw-bold mt-0 mb-0">{{ textEmail }}</p>
+              </div>
+            </div>
+            <!-- skeleton screen -->
+            <div *ngIf="!loading" class="row">
+              <div class="ion-padding custom-skeleton">
+                <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                <ion-skeleton-text animated></ion-skeleton-text>
+                <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+                <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+                <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+              </div>
             </div>
           </div>
-          <!-- skeleton screen -->
-          <div *ngIf="!loading" class="row">
-            <div class="ion-padding custom-skeleton">
-              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
-              <ion-skeleton-text animated></ion-skeleton-text>
-              <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
-              <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
-              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
-            </div>
+          <div class="mb-3 d-grid gap-2 mt-5">
+            <a target="_blank" href="https://wa.me/5571993184941?text=Olá!" role="button" class="btn btn-block btn-secondary btn-colabore"><span class="me-3"><img src="../../assets/btn-whatsapp.png" alt="Whatsapp"></span> Fale com André</a>
           </div>
-        </div>
-        <div class="mb-3 d-grid gap-2 mt-5">
-          <a target="_blank" href="https://wa.me/5571993184941?text=Olá!" role="button" class="btn btn-block btn-secondary btn-colabore"><span class="me-3"><img src="../../assets/btn-whatsapp.png" alt="Whatsapp"></span> Fale com André</a>
         </div>
       </div>
-      <!-- rodapé -->
-      <footer class="footer mt-auto py-3 component-footer z-index-up">
-        <div class="container">
-          <div class="row">
-            <!-- titulo -->
-            <div class="col-12 text-center">
-              <h6 class="project-text-white">ME SEGUE LÁ</h6>
-            </div>
-            <!-- ícones -->
-            <div class="col-12 text-center inline-father">
-              <a href="https://twitter.com/euandrefraga" target="_blank">
-                <div class="inline-child space-icon">
-                  <img src="../../assets/icon-twitter.png" alt="Twitter">
-                </div>
-              </a>
-              <a href="https://www.facebook.com/euandrefraga" target="_blank">
-                <div class="inline-child space-icon">
-                  <img src="../../assets/icon-facebook.png" alt="Facebook">
-                </div>
-              </a>
-              <a href="https://www.instagram.com/euandrefraga/" target="_blank">
-                <div class="inline-child space-icon">
-                  <img src="../../assets/icon-instagram.png" alt="Instagram">
-                </div>
-              </a>
-              <a href="https://www.youtube.com/channel/UC7BSLZW3MscGlXvc1dpHekA" target="_blank">
-                <div class="inline-child space-icon">
-                  <img src="../../assets/icon-youtube.png" alt="YouTube">
-                </div>
-              </a>
-              <a href="https://www.linkedin.com/in/andr%C3%A9-fraga-b7b15434" target="_blank">
-                <div class="inline-child">
-                  <img src="../../assets/icon-linkedin.png" alt="Linkedin">
-                </div>
-              </a>
-            </div>
-            <!-- divisor -->
-            <div class="col-12">
-              <hr class="footer-hr mt-4">
-            </div>
-            <!-- contato -->
-            <div class="col-12">
-              <p class="project-text-white fw-bold mb-1">ENTRE EM CONTATO</p>
-              <p class="project-text-white mb-0 txt-300">E-mail: andrefraga@cms.ba.gov</p>
-              <p class="project-text-white mb-0 txt-300">Telefone: 71 9 9318-4941</p>
-              <p class="project-text-white txt-300">Endereço: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
-            </div>
-            <!-- titulo -->
-            <div class="col-12 text-center">
-              <h6 class="project-text-white">ANDRÉ FRAGA. TODOS OS DIREITOS RESERVADOS | 2021</h6>
-            </div>
+    </div>
+    <!-- rodapé -->
+    <footer class="footer mt-auto py-3 component-footer z-index-up">
+      <div class="container">
+        <div class="row">
+          <!-- titulo -->
+          <div class="col-12 text-center">
+            <h6 class="project-text-white">ME SEGUE LÁ</h6>
+          </div>
+          <!-- ícones -->
+          <div class="col-12 text-center inline-father">
+            <a href="https://twitter.com/euandrefraga" target="_blank">
+              <div class="inline-child space-icon">
+                <img src="../../assets/icon-twitter.png" alt="Twitter">
+              </div>
+            </a>
+            <a href="https://www.facebook.com/euandrefraga" target="_blank">
+              <div class="inline-child space-icon">
+                <img src="../../assets/icon-facebook.png" alt="Facebook">
+              </div>
+            </a>
+            <a href="https://www.instagram.com/euandrefraga/" target="_blank">
+              <div class="inline-child space-icon">
+                <img src="../../assets/icon-instagram.png" alt="Instagram">
+              </div>
+            </a>
+            <a href="https://www.youtube.com/channel/UC7BSLZW3MscGlXvc1dpHekA" target="_blank">
+              <div class="inline-child space-icon">
+                <img src="../../assets/icon-youtube.png" alt="YouTube">
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/andr%C3%A9-fraga-b7b15434" target="_blank">
+              <div class="inline-child">
+                <img src="../../assets/icon-linkedin.png" alt="Linkedin">
+              </div>
+            </a>
+          </div>
+          <!-- divisor -->
+          <div class="col-12">
+            <hr class="footer-hr mt-4">
+          </div>
+          <!-- contato -->
+          <div class="col-12">
+            <p class="project-text-white fw-bold mb-1">ENTRE EM CONTATO</p>
+            <p class="project-text-white mb-0 txt-300">E-mail: andrefraga@cms.ba.gov</p>
+            <p class="project-text-white mb-0 txt-300">Telefone: 71 9 9318-4941</p>
+            <p class="project-text-white txt-300">Endereço: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
+          </div>
+          <!-- titulo -->
+          <div class="col-12 text-center">
+            <h6 class="project-text-white">ANDRÉ FRAGA. TODOS OS DIREITOS RESERVADOS | 2021</h6>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </div>
 </ion-content>
