@@ -14,8 +14,11 @@ export class ColaborePage implements OnInit {
   private content: any
   private textOne: string
   private textTwo: string
+  private response: string
+  private statusResponse: boolean
 
   constructor(private nav:NavController, private firebaseService: FirebaseService) { 
+    this.response = ''
     this.getContentPage()
   }
 
@@ -23,10 +26,13 @@ export class ColaborePage implements OnInit {
   }
 
   login() {
-    console.log('primeira chamada de login')
     this.firebaseService.login(this.email, this.password).then(res => {
-      console.log('res',res)
+      this.statusResponse = true
+      this.response = 'Login efetuado com sucesso'
       this.proximo('colabore-dashboard')
+    }).catch(e => {
+      this.statusResponse = false
+      this.response = 'Erro ao fazer login! Verifique as credenciais e a sua internet'
     })
   }
 

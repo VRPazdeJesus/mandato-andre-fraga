@@ -56,11 +56,13 @@
               <label (click)="proximo('recupera-senha')" class="colabore-link fw-bold">Esqueci minha senha</label>
             </div>
             <div class="mb-3 d-grid gap-2">
-              <!-- <a href="#" role="button" class="btn btn-block btn-secondary btn-colabore">Login</a> -->
               <button class="btn btn-block btn-secondary btn-colabore" ion-button (click)="login()">Login</button>
             </div>
             <div class="mb-3">
               <p class="component-text-black">Ainda não faz parte do mandato? <span class="fw-bold" (click)="proximo('cadastro-usuario')"><label class="colabore-link">Cadastre-se</label></span> </p>
+            </div>
+            <div class="mb-3">
+              <p [class]="statusResponse ? 'component-active fw-bold' : 'component-negative fw-bold'">{{response}}</p>
             </div>
           </div>
         </div>
