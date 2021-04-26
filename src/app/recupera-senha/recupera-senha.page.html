@@ -42,11 +42,10 @@
               </div>
               <div class="text-center">
                 <div class="mb-5 d-grid gap-2">
-                  <!-- <a href="#" role="button" class="btn btn-block btn-secondary btn-colabore">Recuperar senha</a> -->
-                  <button class="btn btn-block btn-secondary btn-colabore" ion-button type="submit" (click)="recoveryPassword()">Recuperar senha</button>
+                  <button class="btn btn-block btn-secondary btn-colabore" ion-button (click)="recoveryPassword()">Recuperar senha</button>
                 </div>
                 <div class="d-grid gap-2">
-                  <p class="component-text-black component-active fw-bold">{{response}}</p>
+                  <p [class]="statusResponse ? 'component-active fw-bold' : 'component-negative fw-bold'">{{response}}</p>
                 </div>
               </div>
             </div>

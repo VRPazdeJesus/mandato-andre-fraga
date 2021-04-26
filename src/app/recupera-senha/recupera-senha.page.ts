@@ -11,6 +11,7 @@ export class RecuperaSenhaPage implements OnInit {
 
   private email: string
   private response: string
+  private statusResponse: boolean
 
   constructor(private nav:NavController, private firebaseService: FirebaseService) {
     this.response = ''
@@ -25,7 +26,12 @@ export class RecuperaSenhaPage implements OnInit {
     this.firebaseService.recoveryPassword(this.email).then(res => {
       this.response = 'E-mail enviado com sucesso'
       this.email = ''
-    });
+      this.statusResponse = true
+    }).catch(e => {
+      this.response = 'E-mail não cadastrado! Tente novamente'
+      this.email = '' 
+      this.statusResponse = false
+    })
   }
 
   proximo(values:any) {
