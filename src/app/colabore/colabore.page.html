@@ -34,7 +34,21 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 space-to-footer">
-          <p class="component-text-black mt-4">{{ textOne }}</p>
+          <!-- oficial screen -->
+          <div *ngIf="loading">
+            <p class="component-text-black mt-4">{{ textOne }}</p>
+          </div>
+          <!-- skeleton screen -->
+          <div *ngIf="!loading">
+            <div class="ion-padding custom-skeleton">
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+              <ion-skeleton-text animated></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            </div>
+          </div>
+          <!-- oficial screen -->
           <div class="row">
             <div class="col-4">
               <img src="../../assets/icon-denuncia.png" alt="Fazer uma denúncia">
@@ -46,7 +60,21 @@
               <img src="../../assets/icon-edital.png" alt="Edital de emenda">
             </div>
           </div>
-          <p class="component-text-black mt-4">{{ textTwo }}</p>
+          <!-- oficial screen -->
+          <div *ngIf="loading">
+            <p class="component-text-black mt-4">{{ textTwo }}</p>
+          </div>
+          <!-- skeleton screen -->
+          <div *ngIf="!loading">
+            <div class="ion-padding custom-skeleton">
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+              <ion-skeleton-text animated></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            </div>
+          </div>
+          <!-- oficial screen -->
           <div class="mt-4">
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label component-text-black ms-4">Usuário</label>

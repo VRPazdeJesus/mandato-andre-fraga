@@ -16,6 +16,7 @@ export class ColaborePage implements OnInit {
   private textTwo: string
   private response: string
   private statusResponse: boolean
+  private loading = false
 
   constructor(private nav:NavController, private firebaseService: FirebaseService) { 
     this.response = ''
@@ -42,6 +43,7 @@ export class ColaborePage implements OnInit {
     }).then(() => {
       this.textOne = this.content.contentOne
       this.textTwo = this.content.contentTwo
+      this.loading = true
     })
   }
 
