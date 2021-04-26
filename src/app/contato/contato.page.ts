@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController } from  '@ionic/angular';
+import { Component, OnInit } from '@angular/core'
+import { NavController } from  '@ionic/angular'
+import { FirebaseService } from '../services/firebase.service'
 
 @Component({
   selector: 'app-contato',
@@ -8,9 +9,27 @@ import { NavController } from  '@ionic/angular';
 })
 export class ContatoPage implements OnInit {
 
-  constructor(private nav:NavController) { }
+  private content: any
+  private textContent: string
+  private address: string
+  private email: string
+
+  constructor(private nav:NavController, private firebaseService: FirebaseService) { }
 
   ngOnInit() {
+    this.getContentPage()
+  }
+
+  getContentPage() {
+    this.firebaseService.getContentPage('contato').then(res => {
+      this.content = res
+    }).then(() => {
+      this.textContent = this.content.contentOne.split(/\\n/g)
+      this.address = this.content.address
+      this.email = this.content.email.split(/\\n/g)
+      console.log(this.email)
+      console.log(this.textContent)
+    })
   }
 
   proximo(values:any) {

@@ -29,15 +29,14 @@
         <img src="../../assets/contato.png" alt="Nosso Mandato">
       </div>
       <div class="col-md-12 component-bg-grey space-to-footer">
-        <p class="component-text-black mt-4">Eu e minha equipe estamos a postos para fazer deste um mandato NOSSO.</p>
-        <p class="component-text-black mt-4">Portanto, se você sentiu falta de algum conteúdo no site ou mesmo deseja solicitar uma agenda, conto com a sua colaboração, com o seu contato:</p>
+        <p *ngFor="let text of textContent" class="component-text-black mt-4">{{ text }}</p>
         <div class="mt-4">
           <div class="row">
             <div class="col-2">
               <img class="w-100" src="../../assets/icone-localizacao.png" alt="Localização">
             </div>
             <div class="col-10">
-              <p class="component-text-black fw-bold">Endereço do gabinete: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
+              <p class="component-text-black fw-bold">{{ address }}</p>
             </div>
           </div>
           <div class="row">
@@ -45,11 +44,11 @@
               <img class="w-100" src="../../assets/icone-email.png" alt="Email">
             </div>
             <div class="col-10">
-              <p class="component-text-black fw-bold">E-mail: andrefraga@cms.ba.gov <br>Ou agende com minha equipe através do whatsapp:</p>
+              <p *ngFor="let textEmail of email" class="component-text-black fw-bold mt-0 mb-0">{{ textEmail }}</p>
             </div>
           </div>
         </div>
-        <div class="mb-3 d-grid gap-2 mt-3">
+        <div class="mb-3 d-grid gap-2 mt-5">
           <a target="_blank" href="https://wa.me/5571993184941?text=Olá!" role="button" class="btn btn-block btn-secondary btn-colabore"><span class="me-3"><img src="../../assets/btn-whatsapp.png" alt="Whatsapp"></span> Fale com André</a>
         </div>
       </div>
