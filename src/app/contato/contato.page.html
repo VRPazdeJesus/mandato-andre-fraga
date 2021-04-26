@@ -29,9 +29,23 @@
         <img src="../../assets/contato.png" alt="Nosso Mandato">
       </div>
       <div class="col-md-12 component-bg-grey space-to-footer">
-        <p *ngFor="let text of textContent" class="component-text-black mt-4">{{ text }}</p>
+        <!-- oficial screen -->
+        <div *ngIf="loading">
+          <p *ngFor="let text of textContent" class="component-text-black mt-4">{{ text }}</p>
+        </div>
+        <!-- skeleton screen -->
+        <div *ngIf="!loading">
+          <div class="ion-padding custom-skeleton">
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            <ion-skeleton-text animated></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </div>
+        </div>
         <div class="mt-4">
-          <div class="row">
+          <!-- oficial screen -->
+          <div *ngIf="loading" class="row">
             <div class="col-2">
               <img class="w-100" src="../../assets/icone-localizacao.png" alt="Localização">
             </div>
@@ -39,12 +53,33 @@
               <p class="component-text-black fw-bold">{{ address }}</p>
             </div>
           </div>
-          <div class="row">
+          <!-- skeleton screen -->
+          <div *ngIf="!loading" class="row">
+            <div class="ion-padding custom-skeleton">
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+              <ion-skeleton-text animated></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            </div>
+          </div>
+          <!-- oficial screen -->
+          <div *ngIf="loading" class="row">
             <div class="col-2">
               <img class="w-100" src="../../assets/icone-email.png" alt="Email">
             </div>
             <div class="col-10">
               <p *ngFor="let textEmail of email" class="component-text-black fw-bold mt-0 mb-0">{{ textEmail }}</p>
+            </div>
+          </div>
+          <!-- skeleton screen -->
+          <div *ngIf="!loading" class="row">
+            <div class="ion-padding custom-skeleton">
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+              <ion-skeleton-text animated></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
             </div>
           </div>
         </div>

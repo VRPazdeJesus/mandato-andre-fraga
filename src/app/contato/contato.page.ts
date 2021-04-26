@@ -13,6 +13,7 @@ export class ContatoPage implements OnInit {
   private textContent: string
   private address: string
   private email: string
+  private loading = false
 
   constructor(private nav:NavController, private firebaseService: FirebaseService) { }
 
@@ -27,8 +28,7 @@ export class ContatoPage implements OnInit {
       this.textContent = this.content.contentOne.split(/\\n/g)
       this.address = this.content.address
       this.email = this.content.email.split(/\\n/g)
-      console.log(this.email)
-      console.log(this.textContent)
+      this.loading = true
     })
   }
 
