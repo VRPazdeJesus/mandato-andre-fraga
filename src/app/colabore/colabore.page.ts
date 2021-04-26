@@ -11,8 +11,13 @@ export class ColaborePage implements OnInit {
 
   private email: string
   private password: string
+  private content: any
+  private textOne: string
+  private textTwo: string
 
-  constructor(private nav:NavController, private firebaseService: FirebaseService) { }
+  constructor(private nav:NavController, private firebaseService: FirebaseService) { 
+    this.getContentPage()
+  }
 
   ngOnInit() {
   }
@@ -22,6 +27,15 @@ export class ColaborePage implements OnInit {
     this.firebaseService.login(this.email, this.password).then(res => {
       console.log('res',res)
       this.proximo('colabore-dashboard')
+    })
+  }
+
+  getContentPage() {
+    this.firebaseService.getContentPage('colabore').then(res => {
+      this.content = res
+    }).then(() => {
+      this.textOne = this.content.contentOne
+      this.textTwo = this.content.contentTwo
     })
   }
 
