@@ -91,7 +91,15 @@
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput8" class="form-label component-text-black ms-4">Senha</label>
-              <input [(ngModel)]="password" type="password" class="form-control" id="exampleFormControlInput8" placeholder="Digite senha de ao menos 8 dígitos">
+              <input [(ngModel)]="password" type="password" class="form-control" id="exampleFormControlInput8" (ngModelChange)="chackPassword($event)" placeholder="Digite senha de ao menos 8 dígitos">
+            </div>
+            <div class="mb-3">
+              <p class="mat-body-2 component-text-black ms-4">A senha deve possuir:</p>
+              <p class="ms-4" [ngStyle]="{'color': hasMinLength ? 'green' : 'red' }">*8 ou mais caracteres.</p>
+              <p class="ms-4" [ngStyle]="{'color': hasNumber ? 'green' : 'red' }">*pelo menos um número</p>
+              <p class="ms-4" [ngStyle]="{'color': hasUpper ? 'green' : 'red' }">*pelo menos uma letra maiúscula</p>
+              <p class="ms-4" [ngStyle]="{'color': hasLower ? 'green' : 'red' }">*pelo menos uma letra minúscula</p>
+              <p class="ms-4" [ngStyle]="{'color': hasSpecialCharacter ? 'green' : 'red' }">*pelo menos um caracter especial: ex.: @</p>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput9" class="form-label component-text-black ms-4">Confirmar senha</label>
