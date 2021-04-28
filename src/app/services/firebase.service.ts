@@ -10,7 +10,7 @@ import 'firebase/database';
 })
 export class FirebaseService {
 
-  constructor(private fireauth: AngularFireAuth) { }
+  constructor(private fireauth: AngularFireAuth, private db: AngularFireDatabase) { }
 
   register(data: any) {
     let day = new Date().toLocaleDateString('pt-br')

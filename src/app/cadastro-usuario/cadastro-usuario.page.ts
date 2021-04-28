@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController } from  '@ionic/angular';
-import { FirebaseService } from '../services/firebase.service';
+import { Component, OnInit } from '@angular/core'
+import { NavController } from  '@ionic/angular'
+import { FirebaseService } from '../services/firebase.service'
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -20,8 +20,12 @@ export class CadastroUsuarioPage implements OnInit {
   private participantAmbassadorNetwork: string
   private password: string
   private confirmPassword: string
+  private response: string
+  private statusResponse: boolean
 
-  constructor(private nav:NavController, private firebaseService: FirebaseService) { }
+  constructor(private nav:NavController, private firebaseService: FirebaseService) {
+    this.response = ''
+  }
 
   ngOnInit() {
   }
@@ -49,7 +53,12 @@ export class CadastroUsuarioPage implements OnInit {
 
   saveRegister(data: any) {
     this.firebaseService.register(data).then(res => {
+      this.statusResponse = true
+      this.response = 'Cadastro realizado com sucesso'
       this.proximo('colabore-dashboard')
+    }).catch(e => {
+      this.statusResponse = false
+      this.response = 'Erro ao cadastrar! Tente novamente'
     })
   }
 
