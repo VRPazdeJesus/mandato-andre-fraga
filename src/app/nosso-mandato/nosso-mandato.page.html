@@ -32,31 +32,33 @@
   </div>
   <div class="component-bg-grey">
     <div class="container">
-      <div class="col-md-12 component-bg-grey space-to-footer">
-        <!-- oficial screen -->
-        <div *ngIf="loading" class="pt-4">
-          <p *ngFor="let text of textContent" class="component-text-black">{{ text }}</p>
-        </div>
-        <!-- skeleton screen -->
-        <div *ngIf="!loading" class="pt-4">
-          <div class="ion-padding custom-skeleton">
-            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
-            <ion-skeleton-text animated></ion-skeleton-text>
-            <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
-            <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
-            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+      <div class="row resize-margin">
+        <div class="col-md-12 space-to-footer">
+          <!-- oficial screen -->
+          <div *ngIf="loading" class="pt-4">
+            <p *ngFor="let text of textContent" class="component-text-black">{{ text }}</p>
           </div>
-        </div>
-        <!-- oficial buttons -->
-        <div class="row">
-          <div class="col-12 text-center col-md-4">
-            <img class="w-100 mt-4 mouse-pointer resize-70" src="../../assets/projetos-leis.png" alt="Nosso Mandato" (click)="proximo('projeto-de-lei')">
+          <!-- skeleton screen -->
+          <div *ngIf="!loading" class="pt-4">
+            <div class="ion-padding custom-skeleton">
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+              <ion-skeleton-text animated></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            </div>
           </div>
-          <div class="col-12 text-center col-md-4">
-            <img class="w-100 mt-4 mouse-pointer resize-70" src="../../assets/ideias.png" alt="Nosso Mandato" (click)="proximo('ideias')">
-          </div>
-          <div class="col-12 text-center col-md-4">
-            <img class="w-100 mt-4 mouse-pointer resize-70" src="../../assets/fiscalizacao.png" alt="Nosso Mandato" (click)="proximo('fiscalizacao')">
+          <!-- oficial buttons -->
+          <div class="row">
+            <div class="col-12 text-center col-md-4">
+              <img class="w-100 mt-4 mouse-pointer resize-90" src="../../assets/projetos-leis.png" alt="Nosso Mandato" (click)="proximo('projeto-de-lei')">
+            </div>
+            <div class="col-12 text-center col-md-4">
+              <img class="w-100 mt-4 mouse-pointer resize-90" src="../../assets/ideias.png" alt="Nosso Mandato" (click)="proximo('ideias')">
+            </div>
+            <div class="col-12 text-center col-md-4">
+              <img class="w-100 mt-4 mouse-pointer resize-90" src="../../assets/fiscalizacao.png" alt="Nosso Mandato" (click)="proximo('fiscalizacao')">
+            </div>
           </div>
         </div>
       </div>

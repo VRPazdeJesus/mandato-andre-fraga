@@ -518,7 +518,12 @@ ion-skeleton-text {
         width: 30% !important;
     }
 
-    .resize-70 {
-        width: 70% !important;
+    .resize-90 {
+        width: 90% !important;
+    }
+
+    .resize-margin {
+        margin-left: 115px;
+        margin-right: 115px;
     }
 }
