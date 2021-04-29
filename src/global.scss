@@ -512,11 +512,13 @@ ion-skeleton-text {
         height: 1px !important;
         background-color: var(--ion-color-light);
         opacity: 0.75;
-        // margin-left: 50px;
-        // margin-right: 50px;
     }
 
     .resize-30 {
         width: 30% !important;
+    }
+
+    .resize-70 {
+        width: 70% !important;
     }
 }
