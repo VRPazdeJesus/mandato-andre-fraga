@@ -44,6 +44,8 @@ export class FazerDenunciaPage implements OnInit {
   entidadeDoProjeto: string
   valorDoProjeto: string
   fotoDenuncia: string
+  havePhoto: boolean
+  photoFileName: string
 
   constructor(private nav:NavController) { 
     this.tituloDoProjeto = ''
@@ -52,6 +54,8 @@ export class FazerDenunciaPage implements OnInit {
     this.bairroDoProjeto = ''
     this.entidadeDoProjeto = ''
     this.valorDoProjeto = ''
+    this.havePhoto = false
+    this.photoFileName = ''
   }
 
   ngOnInit() {
@@ -59,6 +63,18 @@ export class FazerDenunciaPage implements OnInit {
 
   proximo(values:any) {
     this.nav.navigateForward('/'+values)
+  }
+
+  handleFileInput(file: any) {
+    console.log('file', file)
+    this.photoFileName = file[0].name
+    this.havePhoto = true
+  }
+
+  deleteFile() {
+    console.log('quero deletar arquivo')
+    this.photoFileName = ''
+    this.havePhoto = false
   }
 
   sendProposal() {

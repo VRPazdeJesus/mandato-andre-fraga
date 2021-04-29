@@ -34,8 +34,13 @@
           <div class="mt-4">
             <div class="mb-3">
               <label for="exampleFormControlInput0" class="form-label component-text-black ms-4">Fazer upload de foto da denúncia</label>
-              <label for="exampleFormControlInput0" class="form-control" style="height: 200px; display: flex; justify-content: center; align-items: center;">
-                <img src="../../assets/icon-camera.png" alt="ícone de câmera">
+              <label for="exampleFormControlInput0" class="form-control mouse-pointer" style="height: 200px; display: flex; justify-content: center; align-items: center;">
+                <img *ngIf="!havePhoto" src="../../assets/icon-camera.png" alt="ícone de câmera">
+                <ion-chip *ngIf="havePhoto" color="secondary">
+                  <ion-icon name="document-text-outline"></ion-icon>
+                  <ion-label color="dark">{{photoFileName}}</ion-label>
+                  <ion-icon (click)="deleteFile()" name="close-circle"></ion-icon>
+                </ion-chip>
                 <input [(ngModel)]="fotoDenuncia" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput0">
               </label>
             </div>
