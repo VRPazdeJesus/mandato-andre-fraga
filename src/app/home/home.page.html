@@ -16,14 +16,8 @@
   </nav>
   <!-- slides -->
   <ion-slides class="component-background component-space-nav" pager="true" [options]="slideOpts">
-    <ion-slide>
-      <img class="d-block w-100" src="../../assets/card1.webp" alt="First slide">
-    </ion-slide>
-    <ion-slide>
-      <img class="d-block w-100" src="../../assets/card2.webp" alt="Second slide">
-    </ion-slide>
-    <ion-slide>
-      <img loading="lazy" class="d-block w-100" src="../../assets/card3.webp" alt="Third slide">
+    <ion-slide *ngFor="let item of carousel">
+      <img class="d-block w-100" src="{{ item.url }}" alt="card">
     </ion-slide>
   </ion-slides>
   <!-- quem sou -->
