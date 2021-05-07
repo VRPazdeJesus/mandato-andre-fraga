@@ -13,6 +13,7 @@ export class HomePage {
 
   private content: any
   private carousel: any = []
+  private blog: any = []
 
   constructor(private nav:NavController, public modalController: ModalController, private firebaseService: FirebaseService) {}
 
@@ -27,6 +28,20 @@ export class HomePage {
       for (let key in this.content) {
         this.carousel.push(this.content[key])
       }
+
+      this.getPostPage()
+    })
+  }
+
+  getPostPage() {
+    console.log('Buscando os posts da página')
+    this.firebaseService.getContentPage('quem-sou/blog').then(res => {
+      this.content = res
+    }).then(() => {
+      for (let key in this.content) {
+        this.blog.push(this.content[key])
+      }
+      console.log('blog', this.blog)
     })
   }
 
