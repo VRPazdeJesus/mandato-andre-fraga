@@ -10,7 +10,7 @@ import 'firebase/database';
 })
 export class FirebaseService {
 
-  constructor(private fireauth: AngularFireAuth, private db: AngularFireDatabase) { }
+  constructor(private fireauth: AngularFireAuth, private db: AngularFireDatabase, private file: AngularFireStorageModule) { }
 
   register(data: any) {
     let day = new Date().toLocaleDateString('pt-br')
@@ -61,5 +61,13 @@ export class FirebaseService {
         })      
     })
   }
+
+  // sendFile() {
+  //   return new Promise((resolve, reject) => {
+  //     this.fireauth.sendPasswordResetEmail(value).then(
+  //       res => resolve(res),
+  //       err => reject(err))
+  //   })
+  // }
 
 }

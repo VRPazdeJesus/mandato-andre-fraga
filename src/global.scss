@@ -494,6 +494,26 @@ ion-skeleton-text {
     cursor: pointer;
 }
 
+.position-text-comissoes {
+    text-align: left;
+    margin-left: 5px;
+}
+
+.distance-icons-comissoes {
+    padding-left: 1.5rem!important;
+}
+
+.space-h-comissoes {
+    margin-bottom: 1rem !important;
+}
+
+.circle {
+    background: rgb(194 194 194 / 50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
 @media (min-width: 992px) {
     .component-background {
         margin-top: -70px;
@@ -530,4 +550,12 @@ ion-skeleton-text {
     .space-to-footer {
         padding-bottom: 14rem !important;
     }
+
+    .distance-icons-comissoes {
+        padding-left: 14rem!important;
+    }
+
+    .space-h-comissoes {
+        margin-bottom: 3rem !important;
+    }    
 }
