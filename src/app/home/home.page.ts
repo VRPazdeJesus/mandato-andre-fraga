@@ -34,14 +34,12 @@ export class HomePage {
   }
 
   getPostPage() {
-    console.log('Buscando os posts da página')
     this.firebaseService.getContentPage('quem-sou/blog').then(res => {
       this.content = res
     }).then(() => {
       for (let key in this.content) {
         this.blog.push(this.content[key])
       }
-      console.log('blog', this.blog)
     })
   }
 
