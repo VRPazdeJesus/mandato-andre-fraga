@@ -30,7 +30,7 @@ export class ProjetosComSociedadeCivilPage implements OnInit {
         this.blog.push(this.content[key])
       }
     }).then(() => {
-      this.loading = true
+      this.loading = false
     })
   }
 
