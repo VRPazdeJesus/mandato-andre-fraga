@@ -32,7 +32,8 @@
   </div>
   <div class="component-bg-grey">
     <div class="container">
-      <div class="row pt-5 space-to-footer">
+      <!-- oficial -->
+      <div *ngIf="!loading" class="row pt-5 space-to-footer">
         <!-- nova versão -->
         <div *ngFor="let post of blog" class="col-12 col-md-4 text-center mb-3" (click)="presentModal()">
           <div class="card card-post">
@@ -45,6 +46,52 @@
                 <p class="card-text component-text-black container-text">{{ post.content }}</p>
               </div>
               <a href="#" class="post-link">Clique para saber mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- loading -->
+      <div *ngIf="loading" class="row pt-5 space-to-footer">
+        <!-- nova versão -->
+        <div class="col-12 col-md-4 text-center mb-3">
+          <div class="card card-post">
+            <div class="card-body component-bg-light card-content-slide text-start">
+              <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            </div>
+            <div class="card-body mt-3 component-bg-light card-content-slide text-start">
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p class="mt-5"><ion-skeleton-text animated style="width: 60%"></ion-skeleton-text></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-3">
+          <div class="card card-post">
+            <div class="card-body component-bg-light card-content-slide text-start">
+              <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            </div>
+            <div class="card-body mt-3 component-bg-light card-content-slide text-start">
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p class="mt-5"><ion-skeleton-text animated style="width: 60%"></ion-skeleton-text></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-3">
+          <div class="card card-post">
+            <div class="card-body component-bg-light card-content-slide text-start">
+              <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            </div>
+            <div class="card-body mt-3 component-bg-light card-content-slide text-start">
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+              <p class="mt-5"><ion-skeleton-text animated style="width: 60%"></ion-skeleton-text></p>
             </div>
           </div>
         </div>

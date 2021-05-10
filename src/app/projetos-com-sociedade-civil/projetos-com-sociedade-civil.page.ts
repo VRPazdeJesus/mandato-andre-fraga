@@ -13,10 +13,12 @@ export class ProjetosComSociedadeCivilPage implements OnInit {
 
   private content: any
   private blog: any = []
+  private loading: boolean
 
   constructor(private nav:NavController, public modalController: ModalController, private firebaseService: FirebaseService) { }
 
   ngOnInit() {
+    this.loading = true
     this.getPostPage()
   }
 
@@ -27,6 +29,8 @@ export class ProjetosComSociedadeCivilPage implements OnInit {
       for (let key in this.content) {
         this.blog.push(this.content[key])
       }
+    }).then(() => {
+      this.loading = true
     })
   }
 
