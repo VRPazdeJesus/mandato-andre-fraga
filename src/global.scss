@@ -317,7 +317,7 @@ ion-content {
 }
 
 .card-content-slide {
-    height: 260px;
+    height: 200px;
     margin-top: -15px;
     border-radius: 0px 0px 10px 10px;
 }
@@ -512,6 +512,31 @@ ion-skeleton-text {
     width: 56px;
     height: 56px;
     border-radius: 50%;
+}
+
+/* cards do post */
+.card-post {
+    border-radius: 16px 16px 16px 16px;
+}
+
+.card-cover {
+    border-radius: 16px 16px 0px 0px;
+}
+
+#post-title {
+    height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    direction: ltr;
+    text-overflow: ellipsis;
+}
+
+#post-description {
+    height: 75px;
+    display: inline-block;
+    overflow: hidden;
+    direction: ltr;
+    text-overflow: ellipsis;
 }
 
 @media (min-width: 992px) {

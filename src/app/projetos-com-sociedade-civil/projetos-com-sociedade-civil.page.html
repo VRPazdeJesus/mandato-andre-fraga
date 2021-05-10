@@ -32,23 +32,22 @@
   </div>
   <div class="component-bg-grey">
     <div class="container">
-      <div class="row">
-        <!-- lista de posts -->
-        <div *ngFor="let post of blog" class="col-12 col-md-4 space-to-footer text-center">
-          <div class="mt-4 space-to-footer component-bg-trnsparent" (click)="presentModal()">
-            <div class="mb-3">
-              <div class="mt-2 card component-bg-trnsparent no-border">
-                <img class="card-img-top" src="{{ post.cover }}" alt="foto de capa" style="z-index: 1;">
-                <div class="card-body component-bg-light card-content-slide text-start" style="height: 220px !important;">
-                  <h5 class="card-title project-text-secondary fw-bold">{{ post.title }}</h5>
-                  <p class="card-text component-text-black container-text">{{ post.content }}</p>
-                  <a href="#" class="post-link">Clique para saber mais</a>
-                </div>
+      <div class="row pt-5 space-to-footer">
+        <!-- nova versão -->
+        <div *ngFor="let post of blog" class="col-12 col-md-4 text-center mb-3" (click)="presentModal()">
+          <div class="card card-post">
+            <img class="card-cover" src="{{ post.cover }}" alt="foto de capa">
+            <div class="card-body component-bg-light card-content-slide text-start">
+              <div id="post-title">
+                <h5 class="mt-0 card-title project-text-secondary fw-bold">{{ post.title }}</h5>
               </div>
+              <div id="post-description">
+                <p class="card-text component-text-black container-text">{{ post.content }}</p>
+              </div>
+              <a href="#" class="post-link">Clique para saber mais</a>
             </div>
           </div>
         </div>
-        
       </div>
     </div>
     <!-- rodapé -->
