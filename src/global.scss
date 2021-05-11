@@ -539,6 +539,14 @@ ion-skeleton-text {
     text-overflow: ellipsis;
 }
 
+.desktop-menu {
+    display: none;
+}
+
+.distance-top-desktop {
+    margin-top: 0rem!important;
+}
+
 @media (min-width: 992px) {
     .component-background {
         margin-top: -70px;
@@ -582,5 +590,27 @@ ion-skeleton-text {
 
     .space-h-comissoes {
         margin-bottom: 3rem !important;
-    }    
+    }
+    
+    .btn-mobile {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: inherit;
+    }
+
+    .personal-links-menu {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .distance-top-desktop {
+        margin-top: .5rem!important;
+    }
 }
