@@ -15,11 +15,13 @@ export class HomePage {
   private carousel: any = []
   private blog: any = []
   private loadingSlidePage: boolean
+  private loadingPost: boolean
 
   constructor(private nav:NavController, public modalController: ModalController, private firebaseService: FirebaseService) {}
 
   ngOnInit() {
     this.loadingSlidePage = true
+    this.loadingPost = true
     this.getSlidePage()
   }
 
@@ -43,6 +45,8 @@ export class HomePage {
       for (let key in this.content) {
         this.blog.push(this.content[key])
       }
+    }).then(() => {
+      this.loadingPost = false
     })
   }
 

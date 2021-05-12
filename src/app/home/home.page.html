@@ -439,17 +439,20 @@
               <!-- lista de posts -->
               <ion-list class="mt-4 space-to-footer container-left component-bg-trnsparent">
                 <div class="scrolling-wrapper mb-3">
-                  <!-- post -->
-                  <div *ngFor="let post of blog" class="card component-bg-trnsparent no-border card-space" style="width: 18rem;" (click)="presentModal()">
-                    <img loading="lazy" class="card-img-top" src="{{ post.cover }}" alt="foto de capa">
-                    <div class="card-body component-bg-light card-content-slide">
-                      <h5 class="card-title project-text-secondary fw-bold">{{ post.title }}</h5>
-                      <p class="card-text component-text-black container-text">{{ post.content }}</p>
+                  <div class="card card-post mb-3 me-3" *ngFor="let post of blog" style="width: 275px;" (click)="presentModal()">
+                    <img class="card-cover" src="{{ post.cover }}" alt="foto de capa">
+                    <div class="card-body component-bg-light card-content-slide text-start">
+                      <div id="post-title">
+                        <h5 class="mt-0 card-title project-text-secondary fw-bold">{{ post.title }}</h5>
+                      </div>
+                      <div id="post-description">
+                        <p class="card-text component-text-black container-text">{{ post.content }}</p>
+                      </div>
                       <a href="#" class="post-link">Clique para saber mais</a>
                     </div>
                   </div>
                 </div>
-                <a (click)="proximo('projetos-com-sociedade-civil')" class="post-link-another">Ver outros projetos</a>
+                <a (click)="proximo('projetos-com-sociedade-civil')" class="mouse-pointer post-link-another">Ver outros projetos</a>
               </ion-list>
             </div>
           </div>
