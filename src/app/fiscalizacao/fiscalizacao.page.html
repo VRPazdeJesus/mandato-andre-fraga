@@ -1,13 +1,20 @@
 <ion-content>
   <!-- menu -->
   <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
-    <div class="container-fluid">
+    <div class="container-fluid distance-top-desktop mb-2">
       <img class="space-left-5 mouse-pointer" src="../../assets/logo-cerebro.png" alt="André Fraga" (click)="proximo('home')">
-      <button class="btn personal-btn-login" (click)="proximo('colabore')">Login</button>
+      <button class="btn personal-btn-login btn-mobile" (click)="proximo('colabore')">Login</button>
     </div>
-    <div class="container-fluid mt-2 force-center">
+
+    <div class="container-fluid distance-top-desktop mb-2 force-center mobile-menu">
       <div class="row">
         <div class="col-12 personal-titles-menu component-active mt-2"><span>FISCALIZAÇÃO</span></div>
+      </div>
+    </div>
+
+    <div class="container-fluid distance-top-desktop mb-2 force-center desktop-menu">
+      <div class="row">
+        <div class="col-12 personal-titles-menu-desktop component-active mt-2"><span>FISCALIZAÇÃO</span></div>
       </div>
     </div>
   </nav>
