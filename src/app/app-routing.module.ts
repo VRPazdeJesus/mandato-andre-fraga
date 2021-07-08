@@ -91,6 +91,10 @@ const routes: Routes = [
     path: 'edital-de-emenda-form',
     loadChildren: () => import('./edital-de-emenda-form/edital-de-emenda-form.module').then( m => m.EditalDeEmendaFormPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({

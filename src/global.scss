@@ -63,6 +63,22 @@ ion-content {
     background: transparent;
 }
 
+.component-bg-login {
+    --background: rgb(77 37 108 / 25%);
+    background: rgb(77 37 108 / 25%);
+}
+
+/*Centralizar elemento no centro da tela verticalmente */
+.parent-element-vertically-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child-element-vertically-center {
+    display: inline-block;
+}
+
 .personal-navbar {
     background-color: var(--ion-color-primary);
     border-radius: 0 0 0 20px;
@@ -112,6 +128,10 @@ ion-content {
 .colabore-link {
     color: var(--ion-color-medium);
     text-decoration: none;
+}
+
+.label-purple {
+    color: #4D256C;
 }
 
 .personal-titles-menu {
@@ -197,6 +217,16 @@ ion-content {
     color: var(--ion-color-danger);
     line-height: 23px;
     font-weight: bold;
+}
+
+.component-text-purple {
+    font-size: 1em;
+    color: #4D256C;
+    line-height: 23px;
+}
+
+.mouse-pointer {
+    cursor: pointer;
 }
 
 .component-btn-round {
@@ -409,6 +439,15 @@ element.style {
     border-radius: 2.5rem;
     padding: 1rem 1rem 1rem 1.5rem;
     box-shadow: 3px 5px 0px 0.1em rgb(77 37 108);
+}
+
+.btn-purple {
+    font-size: 1rem;
+    border-radius: 2.5rem;
+    padding: 1rem 1rem 1rem 1.5rem;
+    color: #fff;
+    background-color: #4D256C;
+    border-color: #4D256C;
 }
 
 .btn-response {
