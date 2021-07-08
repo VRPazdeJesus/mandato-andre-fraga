@@ -99,6 +99,10 @@ const routes: Routes = [
     path: 'visao-geral',
     loadChildren: () => import('./visao-geral/visao-geral.module').then( m => m.VisaoGeralPageModule)
   },
+  {
+    path: 'usuarios-cadastrados',
+    loadChildren: () => import('./usuarios-cadastrados/usuarios-cadastrados.module').then( m => m.UsuariosCadastradosPageModule)
+  },
 ];
 
 @NgModule({
