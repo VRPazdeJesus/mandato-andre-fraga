@@ -68,6 +68,11 @@ ion-content {
     background: rgb(77 37 108 / 25%);
 }
 
+.component-bg-login-admin {
+    --background: url("assets/login-admin-bg.webp");
+    background: url("assets/login-admin-bg.webp");
+}
+
 /*Centralizar elemento no centro da tela verticalmente */
 .parent-element-vertically-center {
     display: flex;
