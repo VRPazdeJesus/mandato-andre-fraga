@@ -35,7 +35,7 @@ export class LoginPage implements OnInit {
 
       if(this.statusResponse) {
         this.response = 'Login efetuado com sucesso'
-        this.proximo('colabore-dashboard')
+        this.proximo('visao-geral')
       } else {
         this.response = 'Credenciais não autorizadas!'
       }
