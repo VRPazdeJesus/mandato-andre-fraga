@@ -32,4 +32,8 @@ export class UsuariosCadastradosPage implements OnInit {
     })
   }
 
+  proximo(values:any) {
+    this.nav.navigateForward('/'+values)
+  }
+
 }

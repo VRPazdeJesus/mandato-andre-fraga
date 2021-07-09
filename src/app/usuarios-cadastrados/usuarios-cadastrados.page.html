@@ -4,20 +4,18 @@
       <!-- menu -->
       <div id="sideNav" class="col-2 component-bg-login sidenav">
         <div class="text-center">
-          <img class="logo-dashboard" src="../../assets/logo-vereador-andre.svg" alt="Vereador André Fraga">
+          <img class="logo-dashboard" src="../../assets/logo-vereador-andre.svg" alt="Vereador André Fraga" (click)="proximo('home')">
           <p class="salutation">Olá, bem-vindo(a)!</p>
           <!-- <a class="mt-5" href="#">
             <img class="me-3" src="../../assets/icon-visao-geral.svg" alt="Visão Geral">
             <span style="vertical-align: middle;">Visão Geral</span>
           </a> -->
-          <a class="mt-5" href="#">
-            <span style="vertical-align: middle;">Visão Geral</span>
-          </a>
-          <a href="#">Quem sou</a>
-          <a href="#">Nosso mandato</a>
-          <a href="#">Colabore</a>
-          <a href="#">Usuários cadastrados</a>
-          <a href="#">Sair</a>
+          <a (click)="proximo('visao-geral')" class="mt-5"><img class="mouse-pointer" src="../../assets/icon-visao-geral.svg" alt="Visão Geral"></a>
+          <a><img class="mouse-pointer" src="../../assets/icon-quem-sou.svg" alt="Quem sou"></a>
+          <a><img class="mouse-pointer" src="../../assets/icon-nosso-mandato.svg" alt="Nosso mandato"></a>
+          <a><img class="mouse-pointer" src="../../assets/icon-colabore.svg" alt="Colabore"></a>
+          <a><img class="mouse-pointer" src="../../assets/icon-usuarios-cadastrados.svg" alt="Usuários cadastrados"></a>
+          <a (click)="proximo('login')"><img class="mouse-pointer" src="../../assets/icon-sair.svg" alt="Sair"></a>
         </div>
       </div>
       <!-- content -->
@@ -44,5 +42,4 @@
       </div>
     </div>
   </div>
-
 </ion-content>
