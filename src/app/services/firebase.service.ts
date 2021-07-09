@@ -73,6 +73,17 @@ export class FirebaseService {
     })
   }
 
+  getUsers() {
+    return new Promise((resolve, reject) => {
+      let database = firebase.database().ref('users/')
+        .once('value',(snap) => {
+            database.then(
+            res => resolve(snap.val()),
+            err => reject(err))
+        })      
+    })
+  }
+
   // sendFile() {
   //   return new Promise((resolve, reject) => {
   //     this.fireauth.sendPasswordResetEmail(value).then(

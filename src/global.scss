@@ -670,6 +670,19 @@ ion-skeleton-text {
     margin-top: 5rem;
 }
 
+.table-striped>tbody>tr:nth-of-type(odd) {
+    --bs-table-accent-bg: rgb(61 135 77 / 10%);
+    color: #212529;
+}
+
+.salutation {
+    font-family: Lato !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #606060;
+}
+
 @media (min-width: 992px) {
     .component-background {
         margin-top: -70px;
