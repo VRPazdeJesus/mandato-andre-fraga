@@ -1,60 +1,70 @@
 <ion-content>
-  <div class="container-fluid h-100">
+  <div class="h-100">
     <div class="row h-100">
       <!-- menu -->
-      <div id="sideNav" class="col-2 component-bg-login sidenav">
+      <div id="sideNav" class="col-2 pe-0 component-bg-login sidenav">
         <div class="text-center">
           <img class="logo-dashboard" src="../../assets/logo-vereador-andre.svg" alt="Vereador André Fraga" (click)="proximo('home')">
           <p class="salutation">Olá, bem-vindo(a)!</p>
-          <!-- <a class="mt-5" href="#">
-            <img class="me-3" src="../../assets/icon-visao-geral.svg" alt="Visão Geral">
-            <span style="vertical-align: middle;">Visão Geral</span>
-          </a> -->
           <div id="lateral-buttons" class="text-start">
-            <a (click)="proximo('visao-geral')" class="mt-5"><img class="mouse-pointer" src="../../assets/icon-visao-geral.svg" alt="Visão Geral"></a>
-            <a><img class="mouse-pointer" src="../../assets/icon-quem-sou.svg" alt="Quem sou"></a>
-            <a><img class="mouse-pointer" src="../../assets/icon-nosso-mandato.svg" alt="Nosso mandato"></a>
-            <a><img class="mouse-pointer" src="../../assets/icon-colabore.svg" alt="Colabore"></a>
-            <a><img class="mouse-pointer" src="../../assets/icon-usuarios-cadastrados.svg" alt="Usuários cadastrados"></a>
-            <a (click)="proximo('login')"><img class="mouse-pointer" src="../../assets/icon-sair.svg" alt="Sair"></a>
+            <div class="button-dashboard mt-5">
+              <a (click)="proximo('visao-geral')"><img class="mouse-pointer" src="../../assets/icon-visao-geral.svg" alt="Visão Geral"></a>
+            </div>
+            <div class="button-dashboard">
+              <a><img class="mouse-pointer" src="../../assets/icon-quem-sou.svg" alt="Quem sou"></a>
+            </div>
+            <div class="button-dashboard">
+              <a><img class="mouse-pointer" src="../../assets/icon-nosso-mandato.svg" alt="Nosso mandato"></a>
+            </div>
+            <div class="button-dashboard">
+              <a><img class="mouse-pointer" src="../../assets/icon-colabore.svg" alt="Colabore"></a>
+            </div>
+            <div class="button-dashboard">
+              <a><img class="mouse-pointer" src="../../assets/icon-usuarios-cadastrados.svg" alt="Usuários cadastrados"></a>
+            </div>
+            <div class="button-dashboard">
+              <a (click)="proximo('login')"><img class="mouse-pointer" src="../../assets/icon-sair.svg" alt="Sair"></a>
+            </div>
           </div>
         </div>
       </div>
       <!-- content -->
-      <div class="col-10">
-        <h1 class="title-dashboard">Usuários cadastrados</h1>
-        <div class="row">
-          <div class="col-md-6 parent-element-vertically-left-center">
-            <div class="text-start child-element-vertically-center">
-              <p class="subtitle-dashboard mb-0">Usuários cadastrados</p>
+      <div class="col-10 ps-0">
+        <div class="container-fluid">
+          <h1 class="title-dashboard">Usuários cadastrados</h1>
+          <div class="row">
+            <div class="col-md-6 parent-element-vertically-left-center">
+              <div class="text-start child-element-vertically-center">
+                <p class="subtitle-dashboard mb-0">Usuários cadastrados</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="text-end">
+                <button (click)="downloadUsers()" type="button" class="export-button btn btn-secondary btn-sm">Exportar dados</button>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <hr class="divisor">
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="text-end">
-              <button (click)="downloadUsers()" type="button" class="export-button btn btn-secondary btn-sm">Exportar dados</button>
-            </div>
+          <div class="table-responsive-md">
+            <table class="table table-striped">
+              <tbody>
+                <tr *ngFor="let user of users">
+                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">DATA </span><br> {{user.dayregister}}</td>
+                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">NOME COMPLETO </span><br> {{user.name}}</td>
+                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">DATA NASC. </span><br> {{user.birthDate}}</td>
+                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">TELEFONE </span><br> {{user.telephone}}</td>
+                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">RUA </span><br> {{user.address}}</td>
+                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">BAIRRO </span><br> {{user.district}}</td>
+                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">E-MAIL </span><br> {{user.email}}</td>
+                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">REDES SOCIAIS </span><br> {{user.socialNetwork}}</td>
+                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">ELEITOR DE ANDRÉ? </span><br> {{user.andreVoter}}</td>
+                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">FOI EMBAIXADOR? </span><br> {{user.participantAmbassadorNetwork}}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="col-md-12">
-            <hr class="divisor">
-          </div>
-        </div>
-        <div class="table-responsive-md">
-          <table class="table table-striped">
-            <tbody>
-              <tr *ngFor="let user of users">
-                <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">DATA </span><br> {{user.dayregister}}</td>
-                <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">NOME COMPLETO </span><br> {{user.name}}</td>
-                <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">DATA NASC. </span><br> {{user.birthDate}}</td>
-                <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">TELEFONE </span><br> {{user.telephone}}</td>
-                <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">RUA </span><br> {{user.address}}</td>
-                <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">BAIRRO </span><br> {{user.district}}</td>
-                <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">E-MAIL </span><br> {{user.email}}</td>
-                <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">REDES SOCIAIS </span><br> {{user.socialNetwork}}</td>
-                <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">ELEITOR DE ANDRÉ? </span><br> {{user.andreVoter}}</td>
-                <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">FOI EMBAIXADOR? </span><br> {{user.participantAmbassadorNetwork}}</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>

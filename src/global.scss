@@ -662,15 +662,18 @@ ion-skeleton-text {
 }
 
 .sidenav a {
-    padding: 8px 8px 32px 8px;
+    padding: 20px 8px 20px 8px;
     text-decoration: none;
     font-size: 18px;
     color: #818181;
     display: inline-block;
 }
 
-.sidenav a:hover {
-    color: white;
+.button-dashboard:hover {
+    // background: #4D256C;
+    background: white;
+    border-radius: 0px 40px 40px 0px;
+    cursor: pointer;
 }
 
 .logo-dashboard {
