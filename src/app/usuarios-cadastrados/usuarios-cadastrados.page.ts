@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from  '@ionic/angular';
 import { FirebaseService } from '../services/firebase.service';
+import * as XLSX from 'xlsx'; 
 
 @Component({
   selector: 'app-usuarios-cadastrados',
@@ -34,6 +35,18 @@ export class UsuariosCadastradosPage implements OnInit {
 
   proximo(values:any) {
     this.nav.navigateForward('/'+values)
+  }
+
+  downloadUsers() {
+    console.log('donwload dos usuários')
+    this.exportToExcel(this.users,'users');
+  }
+
+  async exportToExcel(data,filename){
+    const ws: XLSX.WorkSheet =XLSX.utils.json_to_sheet(data);
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, filename);
+    XLSX.writeFile(wb, filename+'.xlsx');
   }
 
 }
