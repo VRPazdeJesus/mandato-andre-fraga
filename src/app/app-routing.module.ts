@@ -111,6 +111,10 @@ const routes: Routes = [
     path: 'nosso-mandato-dashboard-admin',
     loadChildren: () => import('./nosso-mandato-dashboard-admin/nosso-mandato-dashboard-admin.module').then( m => m.NossoMandatoDashboardAdminPageModule)
   },
+  {
+    path: 'quem-sou-dashboard-admin',
+    loadChildren: () => import('./quem-sou-dashboard-admin/quem-sou-dashboard-admin.module').then( m => m.QuemSouDashboardAdminPageModule)
+  },
 ];
 
 @NgModule({

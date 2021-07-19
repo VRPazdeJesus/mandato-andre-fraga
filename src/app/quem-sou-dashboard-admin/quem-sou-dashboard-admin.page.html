@@ -31,39 +31,37 @@
       <!-- content -->
       <div class="col-10 ps-0">
         <div class="container-fluid">
-          <h1 class="title-dashboard">Usuários cadastrados</h1>
+          <h1 class="title-dashboard">Quem sou</h1>
           <div class="row">
             <div class="col-md-6 parent-element-vertically-left-center">
               <div class="text-start child-element-vertically-center">
-                <p class="subtitle-dashboard mb-0">Usuários cadastrados</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="text-end">
-                <button (click)="downloadUsers()" type="button" class="export-button btn btn-secondary btn-sm">Exportar dados</button>
+                <p class="subtitle-dashboard mb-0">CARROSSEL</p>
               </div>
             </div>
             <div class="col-md-12">
               <hr class="divisor">
             </div>
+            <div class="col-md-12">
+              <p class="p-dashboard mb-0">Sem novo projetos de leis, no momento</p>
+            </div>
           </div>
-          <div class="table-responsive-md">
-            <table class="table table-striped">
-              <tbody>
-                <tr *ngFor="let user of users">
-                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">DATA </span><br> {{user.dayregister}}</td>
-                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">NOME COMPLETO </span><br> {{user.name}}</td>
-                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">DATA NASC. </span><br> {{user.birthDate}}</td>
-                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">TELEFONE </span><br> {{user.telephone}}</td>
-                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">RUA </span><br> {{user.address}}</td>
-                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">BAIRRO </span><br> {{user.district}}</td>
-                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">E-MAIL </span><br> {{user.email}}</td>
-                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">REDES SOCIAIS </span><br> {{user.socialNetwork}}</td>
-                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">ELEITOR DE ANDRÉ? </span><br> {{user.andreVoter}}</td>
-                  <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">FOI EMBAIXADOR? </span><br> {{user.participantAmbassadorNetwork}}</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="row mt-5">
+            <div class="col-md-6 parent-element-vertically-left-center">
+              <div class="text-start child-element-vertically-center">
+                <p class="subtitle-dashboard mb-0">Projetos com a Sociedade Civil</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="text-end">
+                <button (click)="downloadUsers()" type="button" class="export-button btn btn-secondary btn-sm">Incluir novo projeto</button>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <hr class="divisor">
+            </div>
+            <div class="col-md-12">
+              <p class="p-dashboard mb-0">Sem novo projetos de leis, no momento</p>
+            </div>
           </div>
         </div>
       </div>
