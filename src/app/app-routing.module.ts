@@ -103,6 +103,10 @@ const routes: Routes = [
     path: 'usuarios-cadastrados',
     loadChildren: () => import('./usuarios-cadastrados/usuarios-cadastrados.module').then( m => m.UsuariosCadastradosPageModule)
   },
+  {
+    path: 'colabore-dashboard-admin',
+    loadChildren: () => import('./colabore-dashboard-admin/colabore-dashboard-admin.module').then( m => m.ColaboreDashboardAdminPageModule)
+  },
 ];
 
 @NgModule({
