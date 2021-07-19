@@ -107,6 +107,10 @@ const routes: Routes = [
     path: 'colabore-dashboard-admin',
     loadChildren: () => import('./colabore-dashboard-admin/colabore-dashboard-admin.module').then( m => m.ColaboreDashboardAdminPageModule)
   },
+  {
+    path: 'nosso-mandato-dashboard-admin',
+    loadChildren: () => import('./nosso-mandato-dashboard-admin/nosso-mandato-dashboard-admin.module').then( m => m.NossoMandatoDashboardAdminPageModule)
+  },
 ];
 
 @NgModule({
