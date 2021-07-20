@@ -59,8 +59,21 @@
             <div class="col-md-12">
               <hr class="divisor">
             </div>
-            <div class="col-md-12">
-              <p class="p-dashboard mb-0">Sem novo projetos de leis, no momento</p>
+          </div>
+          <div class="row">
+            <div *ngFor="let post of blog" class="col-12 col-md-4 text-center mb-3" (click)="presentModal()">
+              <div class="card card-post mouse-pointer">
+                <img class="card-cover" src="{{ post.cover }}" alt="foto de capa">
+                <div class="card-body component-bg-light card-content-slide text-start">
+                  <div id="post-title">
+                    <h5 class="mt-0 card-title project-text-secondary fw-bold">{{ post.title }}</h5>
+                  </div>
+                  <div id="post-description">
+                    <p class="card-text component-text-black container-text">{{ post.content }}</p>
+                  </div>
+                  <a href="#" class="post-link">Clique para saber mais</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
