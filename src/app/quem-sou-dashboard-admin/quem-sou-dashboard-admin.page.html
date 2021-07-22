@@ -71,7 +71,12 @@
                   <div id="post-description">
                     <p class="card-text component-text-black container-text">{{ post.content }}</p>
                   </div>
-                  <a href="#" class="post-link">Clique para saber mais</a>
+                  <div class="row">
+                    <div class="col-12 text-end">
+                      <button (click)="downloadUsers()" type="button" class="export-button btn btn-light-green btn-sm me-3">Excluir</button>
+                      <button (click)="downloadUsers()" type="button" class="export-button btn btn-secondary btn-sm">Editar</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
