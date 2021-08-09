@@ -1,29 +1,36 @@
 <ion-content>
-  <div class="container-fluid h-100">
+  <div class="h-100">
     <div class="row h-100">
       <!-- menu -->
-      <div id="sideNav" class="col-2 component-bg-login sidenav">
+      <div id="sideNav" class="col-2 pe-0 component-bg-login sidenav">
         <div class="text-center">
           <img class="logo-dashboard" src="../../assets/logo-vereador-andre.svg" alt="Vereador André Fraga" (click)="proximo('home')">
           <p class="salutation">Olá, bem-vindo(a)!</p>
-          <!-- <a class="mt-5" href="#">
-            <img class="me-3" src="../../assets/icon-visao-geral.svg" alt="Visão Geral">
-            <span style="vertical-align: middle;">Visão Geral</span>
-          </a> -->
-          <a class="mt-5"><img class="mouse-pointer" src="../../assets/icon-visao-geral.svg" alt="Visão Geral"></a>
-          <a><img class="mouse-pointer" src="../../assets/icon-quem-sou.svg" alt="Quem sou"></a>
-          <a><img class="mouse-pointer" src="../../assets/icon-nosso-mandato.svg" alt="Nosso mandato"></a>
-          <a><img class="mouse-pointer" src="../../assets/icon-colabore.svg" alt="Colabore"></a>
-          <a (click)="proximo('usuarios-cadastrados')"><img class="mouse-pointer" src="../../assets/icon-usuarios-cadastrados.svg" alt="Usuários cadastrados"></a>
-          <a (click)="proximo('login')"><img class="mouse-pointer" src="../../assets/icon-sair.svg" alt="Sair"></a>
+          <div id="lateral-buttons" class="text-start">
+            <div class="button-dashboard mt-5">
+              <a (click)="proximo('visao-geral')"><img class="mouse-pointer" src="../../assets/icon-visao-geral.svg" alt="Visão Geral"></a>
+            </div>
+            <div class="button-dashboard">
+              <a (click)="proximo('quem-sou-dashboard-admin')"><img class="mouse-pointer" src="../../assets/icon-quem-sou.svg" alt="Quem sou"></a>
+            </div>
+            <div class="button-dashboard">
+              <a (click)="proximo('nosso-mandato-dashboard-admin')"><img class="mouse-pointer" src="../../assets/icon-nosso-mandato.svg" alt="Nosso mandato"></a>
+            </div>
+            <div class="button-dashboard">
+              <a (click)="proximo('colabore-dashboard-admin')"><img class="mouse-pointer" src="../../assets/icon-colabore.svg" alt="Colabore"></a>
+            </div>
+            <div class="button-dashboard">
+              <a (click)="proximo('usuarios-cadastrados')"><img class="mouse-pointer" src="../../assets/icon-usuarios-cadastrados.svg" alt="Usuários cadastrados"></a>
+            </div>
+            <div class="button-dashboard">
+              <a (click)="proximo('login')"><img class="mouse-pointer" src="../../assets/icon-sair.svg" alt="Sair"></a>
+            </div>
+          </div>
         </div>
       </div>
       <!-- content -->
-      <div class="col-10">
-        <h1 class="title-dashboard">Visão geral</h1>
-        <div class="table-responsive-md">
-          
-        </div>
+      <div class="col-10 ps-0">
+        
       </div>
     </div>
   </div>
