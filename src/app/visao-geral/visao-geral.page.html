@@ -36,11 +36,27 @@
             <div class="col-md-6">
               <div class="text-start">
                 <p class="subtitle-dashboard mb-0">ÚLTIMOS USUÁRIOS CADASTRADOS</p>
+                <p class="subtitle-as-label">(Total: {{userAmount}})</p>
+              </div>
+              <div class="table-responsive-md">
+                <table class="table table-striped-two">
+                  <tbody>
+                    <tr *ngFor="let user of users">
+                      <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">DATA </span><br> {{user.dayregister}}</td>
+                      <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">NOME COMPLETO </span><br> {{user.name}}</td>
+                      <td style="font-size: 12px;"><span style="font-weight: bold; font-size: 12px;">BAIRRO </span><br> {{user.district}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="text-end">
+                <button (click)="proximo('usuarios-cadastrados')" type="button" class="export-button btn btn-primary btn-sm">Ver lista</button>
               </div>
             </div>
             <div class="col-md-6">
               <div class="text-start">
                 <p class="subtitle-dashboard mb-0">SUGESTÕES DE PROJETOS DE LEI RECENTES</p>
+                <p class="subtitle-as-label">(Total: 34 sugestões enviadas)</p>
               </div>
             </div>
           </div>
@@ -48,11 +64,13 @@
             <div class="col-md-6">
               <div class="text-start">
                 <p class="subtitle-dashboard mb-0">INSCRIÇÕES DE PROJETOS DE EMENDA RECENTES</p>
+                <p class="subtitle-as-label">(Total de projetos inscritos: 25)</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="text-start">
                 <p class="subtitle-dashboard mb-0">ÚLTIMAS DENÚNCIAS FEITAS</p>
+                <p class="subtitle-as-label">(Total de denúncias: 143)</p>
               </div>
             </div>
           </div>
