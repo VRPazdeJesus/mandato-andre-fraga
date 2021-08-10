@@ -42,7 +42,22 @@
               <hr class="divisor">
             </div>
             <div class="col-md-12">
-              <p class="p-dashboard mb-0">Sem novo projetos de leis, no momento</p>
+              <!-- <p class="p-dashboard mb-0">Sem novo projetos de leis, no momento</p> -->
+              <div class="row">
+                <div class="col-3 text-center" *ngFor="let image of carousel">
+                  <!-- <div id="image-post" class="post-img-quem-sou" style='background-image: url({{image.url}})'></div> -->
+                  <img src="{{image.url}}" class="mx-auto d-block" alt="post">
+                  <div id="delete-button" class="text-center mt-3 d-grid gap-2">
+                    <button (click)="downloadUsers()" type="button" class="export-button btn btn-light-green btn-sm">Excluir</button>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <img src="{{add.url}}" class="mx-auto d-block" alt="add">
+                  <div id="delete-button" class="text-center mt-3 d-grid gap-2">
+                    <button (click)="downloadUsers()" type="button" class="export-button btn btn-primary btn-sm">{{add.title}}</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="row mt-5">
@@ -62,9 +77,9 @@
           </div>
           <div class="row">
             <div *ngFor="let post of blog" class="col-12 col-md-4 text-center mb-3" (click)="presentModal()">
-              <div class="card card-post mouse-pointer">
+              <div class="card card-post mouse-pointer component-bg-secondary-light">
                 <img class="card-cover" src="{{ post.cover }}" alt="foto de capa">
-                <div class="card-body component-bg-light card-content-slide text-start">
+                <div class="card-body card-content-slide text-start">
                   <div id="post-title">
                     <h5 class="mt-0 card-title project-text-secondary fw-bold">{{ post.title }}</h5>
                   </div>

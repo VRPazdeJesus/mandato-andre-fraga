@@ -12,6 +12,8 @@ export class QuemSouDashboardAdminPage implements OnInit {
 
   private content: any
   private blog: any = []
+  private carousel: any = []
+  private add: any = {}
   private loading: boolean
 
   constructor(private nav:NavController, public modalController: ModalController, private firebaseService: FirebaseService) { }
@@ -27,6 +29,27 @@ export class QuemSouDashboardAdminPage implements OnInit {
       for (let key in this.content) {
         this.blog.push(this.content[key])
       }
+    }).then(() => {
+      this.getCarouselPage()
+    })
+  }
+
+  getCarouselPage() {
+    this.firebaseService.getContentPage('quem-sou/slide').then(res => {
+      this.content = res
+    }).then(() => {
+      for (let key in this.content) {
+        this.carousel.push(this.content[key])
+      }
+    }).then(() => {
+      this.getAddImage()
+    })
+  }
+
+  getAddImage() {
+    this.firebaseService.getContentPage('quem-sou/add').then(res => {
+      this.add = res
+      console.log('add', this.add)
     }).then(() => {
       this.loading = false
     })

@@ -48,6 +48,11 @@ ion-content {
     background: var(--ion-color-secondary);
 }
 
+.component-bg-secondary-light {
+    --background: rgb(0 97 22 / 10%) !important;
+    background: rgb(0 97 22 / 10%) !important;
+}
+
 .component-bg-grey {
     --background: #E5E5E5;
     background: #E5E5E5;
@@ -669,7 +674,7 @@ ion-skeleton-text {
 *  ADMIN DASHBOARD 
 ********************************/
 .sidenav {
-    height: 100%;
+    // height: 100%;
     border-radius: 0px 40px 40px 0px;
 }
 
@@ -761,6 +766,13 @@ ion-skeleton-text {
 
 .p-dashboard {
     color: #323232;
+}
+
+.post-img-quem-sou {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 420px;
 }
 
 @media (min-width: 992px) {
