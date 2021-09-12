@@ -670,6 +670,11 @@ ion-skeleton-text {
     margin-top: 0rem!important;
 }
 
+input:-webkit-autofill, input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    -webkit-text-fill-color: #333;
+}
+
 /*******************************
 *  ADMIN DASHBOARD 
 ********************************/
