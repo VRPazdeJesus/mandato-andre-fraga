@@ -8,15 +8,12 @@ import { CadastroUsuarioPageRoutingModule } from './cadastro-usuario-routing.mod
 
 import { CadastroUsuarioPage } from './cadastro-usuario.page';
 
-import {NgxMaskIonicModule} from 'ngx-mask-ionic';
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CadastroUsuarioPageRoutingModule,
-    NgxMaskIonicModule
+    CadastroUsuarioPageRoutingModule
   ],
   declarations: [CadastroUsuarioPage]
 })

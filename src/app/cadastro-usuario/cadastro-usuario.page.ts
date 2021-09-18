@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core'
-import { NavController } from  '@ionic/angular'
-import { FirebaseService } from '../services/firebase.service'
+import { Component, OnInit } from '@angular/core';
+import { NavController } from  '@ionic/angular';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -20,31 +20,14 @@ export class CadastroUsuarioPage implements OnInit {
   private participantAmbassadorNetwork: string
   private password: string
   private confirmPassword: string
-  private response: string
-  private statusResponse: boolean
-  private hasSpecialCharacter = false
-  private hasMinLength = false
-  private hasNumber = false
-  private hasUpper = false
-  private hasLower = false
 
-  constructor(private nav:NavController, private firebaseService: FirebaseService) {
-    this.response = ''
-  }
+  constructor(private nav:NavController, private firebaseService: FirebaseService) { }
 
   ngOnInit() {
   }
 
   proximo(values:any) {
     this.nav.navigateForward('/'+values)
-  }
-
-  chackPassword(value: any) {
-    this.hasSpecialCharacter = /((.*[=\+\-^$.[\]{​​​​​​​}​​​​​​​()?"!@#%&\/\\,><':;\|_~`].*))$/.test(value)
-    this.hasMinLength = /((^\S{8,}))$/.test(value)
-    this.hasNumber = /((.*[0-9].*))$/.test(value)
-    this.hasUpper = /((.*[A-Z].*))$/.test(value)
-    this.hasLower = /((.*[a-z].*))$/.test(value)
   }
 
   registerUser() {
@@ -66,12 +49,7 @@ export class CadastroUsuarioPage implements OnInit {
 
   saveRegister(data: any) {
     this.firebaseService.register(data).then(res => {
-      this.statusResponse = true
-      this.response = 'Cadastro realizado com sucesso'
       this.proximo('colabore-dashboard')
-    }).catch(e => {
-      this.statusResponse = false
-      this.response = 'Erro ao cadastrar! Tente novamente'
     })
   }
 

@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core'
-import { NavController } from  '@ionic/angular'
-import { ModalController } from '@ionic/angular'
-import { PostPage } from '../modals/post/post.page'
-import { FirebaseService } from '../services/firebase.service'
+import { Component, OnInit } from '@angular/core';
+import { NavController } from  '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { PostPage } from '../modals/post/post.page';
 
 @Component({
   selector: 'app-projetos-com-sociedade-civil',
@@ -11,27 +10,9 @@ import { FirebaseService } from '../services/firebase.service'
 })
 export class ProjetosComSociedadeCivilPage implements OnInit {
 
-  private content: any
-  private blog: any = []
-  private loading: boolean
-
-  constructor(private nav:NavController, public modalController: ModalController, private firebaseService: FirebaseService) { }
+  constructor(private nav:NavController, public modalController: ModalController) { }
 
   ngOnInit() {
-    this.loading = true
-    this.getPostPage()
-  }
-
-  getPostPage() {
-    this.firebaseService.getContentPage('quem-sou/blog').then(res => {
-      this.content = res
-    }).then(() => {
-      for (let key in this.content) {
-        this.blog.push(this.content[key])
-      }
-    }).then(() => {
-      this.loading = false
-    })
   }
 
   proximo(values:any) {

@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireDatabase } from '@angular/fire/database';
 import 'firebase/database';
 
 @Injectable({
@@ -10,7 +8,7 @@ import 'firebase/database';
 })
 export class FirebaseService {
 
-  constructor(private fireauth: AngularFireAuth, private db: AngularFireDatabase, private file: AngularFireStorageModule) { }
+  constructor(private fireauth: AngularFireAuth) { }
 
   register(data: any) {
     let day = new Date().toLocaleDateString('pt-br')
@@ -44,52 +42,12 @@ export class FirebaseService {
   }
 
   login(emailValue: any, passwordValue: any) {
+    console.log('fiz login')
     return new Promise((resolve, reject) => {
       this.fireauth.signInWithEmailAndPassword(emailValue, passwordValue).then(
         res => resolve(res),
         err => reject(err))
     })
   }
-
-  getContentPage(value: string) {
-    return new Promise((resolve, reject) => {
-      let database = firebase.database().ref('pages/'+value)
-        .once('value',(snap) => {
-            database.then(
-            res => resolve(snap.val()),
-            err => reject(err))
-        })      
-    })
-  }
-
-  authAdmin() {
-    return new Promise((resolve, reject) => {
-      let database = firebase.database().ref('auth-admin/')
-        .once('value',(snap) => {
-            database.then(
-            res => resolve(snap.val()),
-            err => reject(err))
-        })      
-    })
-  }
-
-  getUsers() {
-    return new Promise((resolve, reject) => {
-      let database = firebase.database().ref('users/')
-        .once('value',(snap) => {
-            database.then(
-            res => resolve(snap.val()),
-            err => reject(err))
-        })      
-    })
-  }
-
-  // sendFile() {
-  //   return new Promise((resolve, reject) => {
-  //     this.fireauth.sendPasswordResetEmail(value).then(
-  //       res => resolve(res),
-  //       err => reject(err))
-  //   })
-  // }
 
 }

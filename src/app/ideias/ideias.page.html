@@ -1,20 +1,13 @@
 <ion-content>
   <!-- menu -->
   <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
-    <div class="container-fluid distance-top-desktop mb-2">
-      <img class="space-left-5 mouse-pointer" src="../../assets/logo-cerebro.png" alt="André Fraga" (click)="proximo('home')">
-      <button class="btn personal-btn-login btn-mobile" (click)="proximo('colabore')">Login</button>
+    <div class="container-fluid">
+      <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga" (click)="proximo('home')">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Login</button>
     </div>
-
-    <div class="container-fluid distance-top-desktop mb-2 force-center mobile-menu">
+    <div class="container-fluid mt-2 force-center">
       <div class="row">
         <div class="col-12 personal-titles-menu component-active mt-2"><span>43 IDEIAS PARA SALVADOR</span></div>
-      </div>
-    </div>
-
-    <div class="container-fluid distance-top-desktop mb-2 force-center desktop-menu">
-      <div class="row">
-        <div class="col-12 personal-titles-menu-desktop component-active mt-2"><span>43 IDEIAS PARA SALVADOR</span></div>
       </div>
     </div>
   </nav>
@@ -32,84 +25,78 @@
       <div class="col-md-12 text-center mt-3">
         <img src="../../assets/43-ideias.png" alt="Ideias para Salvador">
       </div>
-    </div>
-  </div>
-  <div class="component-bg-grey">
-    <div class="container">
-      <div class="row space-to-footer">
-        <div class="col-12 mb-3">
-          <p class="component-text-black mt-4">Veja o andamento das 43 ideias para Salvador que elaboramos juntos durante a campanha e que estão divididas segundo os Objetivos de Desenvolvimento Sustentável (ODS’s) abaixo:</p>
-          <div class="text-center">
-            <img class="mt-2" src="../../assets/ods.png" alt="logo da ONU">
-          </div>
-        </div>
-        <div class="col-6 col-md-3 mt-3">
-          <img class="w-100" src="../../assets/ods3.png" alt="ODS 3 - Saúde e Bem-estar" (click)="proximo('ideias-ods3')">
-        </div>
-        <div class="col-6 col-md-3 mt-3">
-          <img class="w-100" src="../../assets/ods4.png" alt="ODS 4 - Educação de qualidade" (click)="proximo('ideias-ods4')">
-        </div>
-        <div class="col-6 col-md-3 mt-3">
-          <img class="w-100" src="../../assets/ods13.png" alt="ODS 13 - Cidades e Comunidades Sustentáveis" (click)="proximo('ideias-ods13')">
-        </div>
-        <div class="col-6 col-md-3 mt-3">
-          <img class="w-100" src="../../assets/ods11.png" alt="ODS 11 - Cação contra a mudança global do clima" (click)="proximo('ideias-ods11')">
-        </div>
-      </div>
-    </div>
-    <!-- rodapé -->
-    <footer class="footer mt-auto py-3 component-footer z-index-up">
-      <div class="container">
+      <div class="col-md-12 component-bg-grey space-to-footer">
+        <p class="component-text-black mt-4">Veja o andamento das 43 ideias para Salvador que elaboramos juntos durante a campanha e que estão divididas segundo os Objetivos de Desenvolvimento Sustentável (ODS’s) abaixo:</p>
+        <img class="w-100 mt-2" src="../../assets/ods.png" alt="logo da ONU">
         <div class="row">
-          <!-- titulo -->
-          <div class="col-12 text-center">
-            <h6 class="project-text-white">ME SEGUE LÁ</h6>
+          <div class="col-6 mt-3">
+            <img class="w-100" src="../../assets/ods3.png" alt="ODS 3 - Saúde e Bem-estar" (click)="proximo('ideias-ods3')">
           </div>
-          <!-- ícones -->
-          <div class="col-12 text-center inline-father">
-            <a href="https://twitter.com/euandrefraga" target="_blank">
-              <div class="inline-child space-icon">
-                <img src="../../assets/icon-twitter.png" alt="Twitter">
-              </div>
-            </a>
-            <a href="https://www.facebook.com/euandrefraga" target="_blank">
-              <div class="inline-child space-icon">
-                <img src="../../assets/icon-facebook.png" alt="Facebook">
-              </div>
-            </a>
-            <a href="https://www.instagram.com/euandrefraga/" target="_blank">
-              <div class="inline-child space-icon">
-                <img src="../../assets/icon-instagram.png" alt="Instagram">
-              </div>
-            </a>
-            <a href="https://www.youtube.com/channel/UC7BSLZW3MscGlXvc1dpHekA" target="_blank">
-              <div class="inline-child space-icon">
-                <img src="../../assets/icon-youtube.png" alt="YouTube">
-              </div>
-            </a>
-            <a href="https://www.linkedin.com/in/andr%C3%A9-fraga-b7b15434" target="_blank">
-              <div class="inline-child">
-                <img src="../../assets/icon-linkedin.png" alt="Linkedin">
-              </div>
-            </a>
+          <div class="col-6 mt-3">
+            <img class="w-100" src="../../assets/ods4.png" alt="ODS 4 - Educação de qualidade" (click)="proximo('ideias-ods4')">
           </div>
-          <!-- divisor -->
-          <div class="col-12">
-            <hr class="footer-hr mt-4">
+          <div class="col-6 mt-3">
+            <img class="w-100" src="../../assets/ods13.png" alt="ODS 13 - Cidades e Comunidades Sustentáveis" (click)="proximo('ideias-ods13')">
           </div>
-          <!-- contato -->
-          <div class="col-12">
-            <p class="project-text-white fw-bold mb-1">ENTRE EM CONTATO</p>
-            <p class="project-text-white mb-0 txt-300">E-mail: andrefraga@cms.ba.gov</p>
-            <p class="project-text-white mb-0 txt-300">Telefone: 71 9 9318-4941</p>
-            <p class="project-text-white txt-300">Endereço: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
-          </div>
-          <!-- titulo -->
-          <div class="col-12 text-center">
-            <h6 class="project-text-white">ANDRÉ FRAGA. TODOS OS DIREITOS RESERVADOS | 2021</h6>
+          <div class="col-6 mt-3">
+            <img class="w-100" src="../../assets/ods11.png" alt="ODS 11 - Cação contra a mudança global do clima" (click)="proximo('ideias-ods11')">
           </div>
         </div>
       </div>
-    </footer>
+      <!-- rodapé -->
+      <footer class="footer mt-auto py-3 component-footer z-index-up">
+        <div class="container">
+          <div class="row">
+            <!-- titulo -->
+            <div class="col-12 text-center">
+              <h6 class="project-text-white">ME SEGUE LÁ</h6>
+            </div>
+            <!-- ícones -->
+            <div class="col-12 text-center inline-father">
+              <a href="https://twitter.com/euandrefraga" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-twitter.png" alt="Twitter">
+                </div>
+              </a>
+              <a href="https://www.facebook.com/euandrefraga" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-facebook.png" alt="Facebook">
+                </div>
+              </a>
+              <a href="https://www.instagram.com/euandrefraga/" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-instagram.png" alt="Instagram">
+                </div>
+              </a>
+              <a href="https://www.youtube.com/channel/UC7BSLZW3MscGlXvc1dpHekA" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-youtube.png" alt="YouTube">
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/andr%C3%A9-fraga-b7b15434" target="_blank">
+                <div class="inline-child">
+                  <img src="../../assets/icon-linkedin.png" alt="Linkedin">
+                </div>
+              </a>
+            </div>
+            <!-- divisor -->
+            <div class="col-12">
+              <hr class="footer-hr mt-4">
+            </div>
+            <!-- contato -->
+            <div class="col-12">
+              <p class="project-text-white fw-bold mb-1">ENTRE EM CONTATO</p>
+              <p class="project-text-white mb-0 txt-300">E-mail: andrefraga@cms.ba.gov</p>
+              <p class="project-text-white mb-0 txt-300">Telefone: 71 9 9318-4941</p>
+              <p class="project-text-white txt-300">Endereço: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
+            </div>
+            <!-- titulo -->
+            <div class="col-12 text-center">
+              <h6 class="project-text-white">ANDRÉ FRAGA. TODOS OS DIREITOS RESERVADOS | 2021</h6>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
   </div>
 </ion-content>

@@ -91,30 +91,6 @@ const routes: Routes = [
     path: 'edital-de-emenda-form',
     loadChildren: () => import('./edital-de-emenda-form/edital-de-emenda-form.module').then( m => m.EditalDeEmendaFormPageModule)
   },
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'visao-geral',
-    loadChildren: () => import('./visao-geral/visao-geral.module').then( m => m.VisaoGeralPageModule)
-  },
-  {
-    path: 'usuarios-cadastrados',
-    loadChildren: () => import('./usuarios-cadastrados/usuarios-cadastrados.module').then( m => m.UsuariosCadastradosPageModule)
-  },
-  {
-    path: 'colabore-dashboard-admin',
-    loadChildren: () => import('./colabore-dashboard-admin/colabore-dashboard-admin.module').then( m => m.ColaboreDashboardAdminPageModule)
-  },
-  {
-    path: 'nosso-mandato-dashboard-admin',
-    loadChildren: () => import('./nosso-mandato-dashboard-admin/nosso-mandato-dashboard-admin.module').then( m => m.NossoMandatoDashboardAdminPageModule)
-  },
-  {
-    path: 'quem-sou-dashboard-admin',
-    loadChildren: () => import('./quem-sou-dashboard-admin/quem-sou-dashboard-admin.module').then( m => m.QuemSouDashboardAdminPageModule)
-  },
 ];
 
 @NgModule({

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from  '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { PostPage } from '../modals/post/post.page';
-import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-home',
@@ -11,44 +10,7 @@ import { FirebaseService } from '../services/firebase.service';
 })
 export class HomePage {
 
-  private content: any
-  private carousel: any = []
-  private blog: any = []
-  private loadingSlidePage: boolean
-  private loadingPost: boolean
-
-  constructor(private nav:NavController, public modalController: ModalController, private firebaseService: FirebaseService) {}
-
-  ngOnInit() {
-    this.loadingSlidePage = true
-    this.loadingPost = true
-    this.getSlidePage()
-  }
-
-  getSlidePage() {
-    this.firebaseService.getContentPage('quem-sou/slide').then(res => {
-      this.content = res
-    }).then(() => {
-      for (let key in this.content) {
-        this.carousel.push(this.content[key])
-      }
-    }).then(() => {
-      this.loadingSlidePage = false
-      this.getPostPage()
-    })
-  }
-
-  getPostPage() {
-    this.firebaseService.getContentPage('quem-sou/blog').then(res => {
-      this.content = res
-    }).then(() => {
-      for (let key in this.content) {
-        this.blog.push(this.content[key])
-      }
-    }).then(() => {
-      this.loadingPost = false
-    })
-  }
+  constructor(private nav:NavController, public modalController: ModalController) {}
 
   slideOpts = {
     initialSlide: 0,

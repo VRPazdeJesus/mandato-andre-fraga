@@ -1,37 +1,29 @@
 <ion-content [fullscreen]="true">
   <!-- menu -->
   <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
-    <div class="container-fluid distance-top-desktop mb-2">
+    <div class="container-fluid">
       <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga">
-      <button class="btn personal-btn-login btn-mobile" (click)="proximo('colabore')">Login</button>
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Login</button>
     </div>
-    <div class="container-fluid distance-top-desktop mb-2">
-      <div class="row mobile-menu">
-        <div class="col-3 mouse-pointer personal-links-menu text-bottom component-active"><span>Quem sou</span></div>
-        <div class="col-3 mouse-pointer personal-links-menu" (click)="proximo('nosso-mandato')"><span class="project-text-white">Nosso Mandato</span></div>
-        <div class="col-3 mouse-pointer personal-links-menu text-bottom" (click)="proximo('colabore')"><span class="project-text-white">Colabore</span></div>
-        <div class="col-3 mouse-pointer personal-links-menu text-bottom" (click)="proximo('contato')"><span class="project-text-white">Contato</span></div>
-      </div>
-      <div class="desktop-menu v-center-h-center">
-        <ul class="navbar-nav">
-          <li class="nav-item mouse-pointer personal-links-menu component-active"><span>Quem sou</span></li>
-          <li class="nav-item mouse-pointer personal-links-menu ms-4" (click)="proximo('nosso-mandato')"><span class="project-text-white">Nosso Mandato</span></li>
-          <li class="nav-item mouse-pointer personal-links-menu ms-4" (click)="proximo('colabore')"><span class="project-text-white">Colabore</span></li>
-          <li class="nav-item mouse-pointer personal-links-menu ms-4" (click)="proximo('contato')"><span class="project-text-white">Contato</span></li>
-          <li class="nav-item mouse-pointer personal-links-menu ms-4" (click)="proximo('colabore')"><span class="project-text-white">Login</span></li>
-        </ul>
+    <div class="container-fluid mt-2">
+      <div class="row">
+        <div class="col-3 personal-links-menu text-bottom component-active"><span>Quem sou</span></div>
+        <div class="col-3 personal-links-menu" (click)="proximo('nosso-mandato')"><span class="project-text-white">Nosso Mandato</span></div>
+        <div class="col-3 personal-links-menu text-bottom" (click)="proximo('colabore')"><span class="project-text-white">Colabore</span></div>
+        <div class="col-3 personal-links-menu text-bottom" (click)="proximo('contato')"><span class="project-text-white">Contato</span></div>
       </div>
     </div>
   </nav>
   <!-- slides -->
-  <ion-slides *ngIf="!loadingSlidePage" class="component-background component-space-nav" pager="true" [options]="slideOpts">
-    <ion-slide *ngFor="let item of carousel">
-      <img class="d-block w-100" src="{{ item.url }}" alt="card">
-    </ion-slide>
-  </ion-slides>
-  <ion-slides *ngIf="loadingSlidePage" class="component-background component-space-nav" pager="true" [options]="slideOpts">
+  <ion-slides class="component-background component-space-nav" pager="true" [options]="slideOpts">
     <ion-slide>
-      <ion-skeleton-text animated style="width: 100%; height: 473px;"></ion-skeleton-text>
+      <img class="d-block w-100" src="../../assets/card1.webp" alt="First slide">
+    </ion-slide>
+    <ion-slide>
+      <img class="d-block w-100" src="../../assets/card2.webp" alt="Second slide">
+    </ion-slide>
+    <ion-slide>
+      <img loading="lazy" class="d-block w-100" src="../../assets/card3.webp" alt="Third slide">
     </ion-slide>
   </ion-slides>
   <!-- quem sou -->
@@ -365,62 +357,19 @@
                 <img loading="lazy" src="../../assets/comissoes.png" alt="Logo Comissões">
               </div>
               <!-- comissões -->
-              <div class="mt-3 component-p-space distance-icons-comissoes">
+              <div class="mt-3 component-p-space">
                 <div class="row text-center">
-                  <!-- comissão clima -->
-                  <div class="col-12 col-md-6 space-h-comissoes">
-                    <div class="d-flex">
-                      <div class="v-center-h-center">
-                        <div class="circle v-center-h-center">
-                          <img src="../../assets/rain.png" alt="ícone de chuva">
-                        </div>
-                      </div>
-                      <div class="position-text-comissoes">
-                        <p class="project-text-secondary fw-bold mb-0">Comissão Especial de Emergência</p>
-                        <p class="project-text-secondary fw-bold mb-0">Climática e Inovação</p>
-                      </div>
-                    </div>
+                  <div class="col-12 col-md-6">
+                    <img loading="lazy" src="../../assets/teste-climaticas.png" alt="ícone de gráfico">
                   </div>
-                  <!-- comissao urbana -->
-                  <div class="col-12 col-md-6 space-h-comissoes">
-                    <div class="d-flex">
-                      <div class="v-center-h-center">
-                        <div class="circle v-center-h-center">
-                          <img src="../../assets/city.png" alt="ícone de cidade">
-                        </div>
-                      </div>
-                      <div class="position-text-comissoes">
-                        <p class="project-text-secondary fw-bold mb-0">Comissão de Planejamento</p>
-                        <p class="project-text-secondary fw-bold mb-0">Urbano e Meio Ambiente</p>
-                      </div>
-                    </div>
+                  <div class="col-12 col-md-6 mt-3">
+                    <img loading="lazy" src="../../assets/teste-urbanas.png" alt="ícone de gráfico">
                   </div>
-                  <!-- comissão legislativa -->
-                  <div class="col-12 col-md-6 space-h-comissoes">
-                    <div class="d-flex">
-                      <div class="v-center-h-center">
-                        <div class="circle v-center-h-center">
-                          <img src="../../assets/tribunal.png" alt="ícone de martelo de tribunal">
-                        </div>
-                      </div>
-                      <div class="position-text-comissoes">
-                        <p class="project-text-secondary fw-bold mb-0">Comissão de Participação</p>
-                        <p class="project-text-secondary fw-bold mb-0">Legislativa</p>
-                      </div>
-                    </div>
+                  <div class="col-12 col-md-6 mt-3">
+                    <img loading="lazy" src="../../assets/teste-legislativo.png" alt="ícone de gráfico">
                   </div>
-                  <!-- comissão cultural -->
-                  <div class="col-12 col-md-6 space-h-comissoes">
-                    <div class="d-flex">
-                      <div class="v-center-h-center">
-                        <div class="circle v-center-h-center">
-                          <img src="../../assets/mascara.png" alt="ícone de máscara">
-                        </div>
-                      </div>
-                      <div class="position-text-comissoes v-center-h-center">
-                        <p class="project-text-secondary fw-bold mb-0">Comissão de Cultura</p>
-                      </div>
-                    </div>
+                  <div class="col-12 col-md-6 mt-3">
+                    <img loading="lazy" src="../../assets/teste-cultura.png" alt="ícone de gráfico">
                   </div>
                 </div>
               </div>
@@ -439,20 +388,32 @@
               <!-- lista de posts -->
               <ion-list class="mt-4 space-to-footer container-left component-bg-trnsparent">
                 <div class="scrolling-wrapper mb-3">
-                  <div class="mouse-pointer card card-post mb-3 me-3" *ngFor="let post of blog" style="width: 275px;" (click)="presentModal()">
-                    <img class="card-cover" src="{{ post.cover }}" alt="foto de capa">
-                    <div class="card-body component-bg-light card-content-slide text-start">
-                      <div id="post-title">
-                        <h5 class="mt-0 card-title project-text-secondary fw-bold">{{ post.title }}</h5>
-                      </div>
-                      <div id="post-description">
-                        <p class="card-text component-text-black container-text">{{ post.content }}</p>
-                      </div>
+                  <div class="card component-bg-trnsparent no-border card-space" style="width: 18rem;" (click)="presentModal()">
+                    <img loading="lazy" class="card-img-top" src="../../assets/post-canteiro.webp" alt="canteiro">
+                    <div class="card-body component-bg-light card-content-slide">
+                      <h5 class="card-title project-text-secondary fw-bold">CANTEIROS COLETIVOS</h5>
+                      <p class="card-text component-text-black container-text">O movimento Canteiros Coletivos é uma iniciativa cidadã, autônoma e apartidária de recuperação de praças e canteiros abandonados da cidade de Salvador.</p>
+                      <a href="#" class="post-link">Clique para saber mais</a>
+                    </div>
+                  </div>
+                  <div class="card component-bg-trnsparent no-border card-space" style="width: 18rem;">
+                    <img loading="lazy" class="card-img-top" src="../../assets/post-bike.png" alt="canteiro">
+                    <div class="card-body component-bg-light card-content-slide">
+                      <h5 class="card-title project-text-secondary fw-bold">LA FRIDA BIKE</h5>
+                      <p class="card-text component-text-black container-text">Um empreendedorismo social orgânico e empoderador, criado por mulheres negras e feito por nós, mulheres negras. Com ideia de incentivar o uso da bike como... </p>
+                      <a href="#" class="post-link">Clique para saber mais</a>
+                    </div>
+                  </div>
+                  <div class="card component-bg-trnsparent no-border card-space" style="width: 18rem;">
+                    <img loading="lazy" class="card-img-top" src="../../assets/post-redemoinho.webp" alt="canteiro">
+                    <div class="card-body component-bg-light card-content-slide">
+                      <h5 class="card-title project-text-secondary fw-bold">REDEMOINHO</h5>
+                      <p class="card-text component-text-black container-text">É uma cooperativa de serviços na área do Comércio Justo e Economia Solidária, tendo nas compras e vendas de produtos da agricultura familiar...</p>
                       <a href="#" class="post-link">Clique para saber mais</a>
                     </div>
                   </div>
                 </div>
-                <a (click)="proximo('projetos-com-sociedade-civil')" class="mouse-pointer post-link-another">Ver outros projetos</a>
+                <a (click)="proximo('projetos-com-sociedade-civil')" class="post-link-another">Ver outros projetos</a>
               </ion-list>
             </div>
           </div>

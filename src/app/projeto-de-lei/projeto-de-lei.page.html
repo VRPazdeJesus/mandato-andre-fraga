@@ -1,20 +1,13 @@
 <ion-content>
   <!-- menu -->
   <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
-    <div class="container-fluid distance-top-desktop mb-2">
-      <img class="space-left-5 mouse-pointer" src="../../assets/logo-cerebro.png" alt="André Fraga" (click)="proximo('home')">
-      <button class="btn personal-btn-login btn-mobile" (click)="proximo('colabore')">Login</button>
+    <div class="container-fluid">
+      <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga" (click)="proximo('home')">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Login</button>
     </div>
-
-    <div class="container-fluid distance-top-desktop mb-2 force-center mobile-menu">
+    <div class="container-fluid mt-2 force-center">
       <div class="row">
         <div class="col-12 personal-titles-menu component-active mt-2"><span>PROJETOS DE LEI E DE INDICAÇÃO</span></div>
-      </div>
-    </div>
-
-    <div class="container-fluid distance-top-desktop mb-2 force-center desktop-menu">
-      <div class="row">
-        <div class="col-12 personal-titles-menu-desktop component-active mt-2"><span>PROJETOS DE LEI E DE INDICAÇÃO</span></div>
       </div>
     </div>
   </nav>
@@ -32,157 +25,65 @@
       <div class="col-md-12 text-center mt-3">
         <img src="../../assets/projeto-lei.png" alt="Nosso Mandato">
       </div>
+      <div class="col-md-12 component-bg-grey space-to-footer z-index-down">
+        <p class="component-text-black mt-4">Projeto de lei é um tipo de proposta normativa submetida à deliberação de um órgão legislativo, com o objetivo de produzir uma lei. Normalmente, um projeto de lei depende ainda da aprovação ou veto pelo Poder Executivo antes de entrar em vigor.</p>
+        <p class="component-text-black">Projetos de Indicação são sugestões de matéria que podem tornar-se lei. As indicações são enviadas pelos Vereadores ao Poder Executivo e assim, se o Prefeito e sua equipe julgarem importante a matéria ao município, será devolvido a indicação em forma de Projeto de Lei para que seja votado em Sessão Plenária.</p>
+        <p class="component-text-black">Abaixo estão Projetos de Lei e de Indicação enviados por mim ao Poder Executivo:</p>
+      </div>
     </div>
   </div>
-  <div class="component-bg-grey">
-    <div class="container space-to-footer">
+  <!-- rodapé -->
+  <footer class="footer mt-auto py-3 component-footer z-index-up">
+    <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <p class="component-text-black mt-4">Projeto de lei é um tipo de proposta normativa submetida à deliberação de um órgão legislativo, com o objetivo de produzir uma lei. Normalmente, um projeto de lei depende ainda da aprovação ou veto pelo Poder Executivo antes de entrar em vigor.</p>
-          <p class="component-text-black">Projetos de Indicação são sugestões de matéria que podem tornar-se lei. As indicações são enviadas pelos Vereadores ao Poder Executivo e assim, se o Prefeito e sua equipe julgarem importante a matéria ao município, será devolvido a indicação em forma de Projeto de Lei para que seja votado em Sessão Plenária.</p>
-          <p class="component-text-black">Abaixo estão Projetos de Lei e de Indicação enviados por mim ao Poder Executivo:</p>
+        <!-- titulo -->
+        <div class="col-12 text-center">
+          <h6 class="project-text-white">ME SEGUE LÁ</h6>
         </div>
-      </div>
-      <div class="row">
-        <!-- card ionic -->
-        <div class="col-md-4">
-          <ion-card class="mt-4 radios-card-9">
-            <div class="row component-bg-light">
-              <div class="col-1 lateral-line-primary"></div>
-              <div class="col-11 lateral-content">
-                <ion-card-header class="ps-0">
-                  <ion-card-title class="card-index-primary">01</ion-card-title>
-                </ion-card-header>
-              
-                <ion-card-content class="ps-0">
-                  <div class="row">
-                    <p class="fw-bold component-text-black">Criar um protocolo municipal para o enfrentamento de pandemias, considerando a experiência adquirida com o novo coronavírus.</p>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-6 text-center">
-                      <p class="fw-bold">Situação</p>
-                      <p>Em andamento</p>
-                    </div>
-                    <div class="col-6 text-center">
-                      <button type="button" class="btn btn-primary btn-more" (click)="proximo('nosso-mandato')">Saiba mais</button>
-                    </div>
-                  </div>
-                </ion-card-content>
-              </div>
+        <!-- ícones -->
+        <div class="col-12 text-center inline-father">
+          <a href="https://twitter.com/euandrefraga" target="_blank">
+            <div class="inline-child space-icon">
+              <img src="../../assets/icon-twitter.png" alt="Twitter">
             </div>
-          </ion-card>
+          </a>
+          <a href="https://www.facebook.com/euandrefraga" target="_blank">
+            <div class="inline-child space-icon">
+              <img src="../../assets/icon-facebook.png" alt="Facebook">
+            </div>
+          </a>
+          <a href="https://www.instagram.com/euandrefraga/" target="_blank">
+            <div class="inline-child space-icon">
+              <img src="../../assets/icon-instagram.png" alt="Instagram">
+            </div>
+          </a>
+          <a href="https://www.youtube.com/channel/UC7BSLZW3MscGlXvc1dpHekA" target="_blank">
+            <div class="inline-child space-icon">
+              <img src="../../assets/icon-youtube.png" alt="YouTube">
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/andr%C3%A9-fraga-b7b15434" target="_blank">
+            <div class="inline-child">
+              <img src="../../assets/icon-linkedin.png" alt="Linkedin">
+            </div>
+          </a>
         </div>
-
-        <div class="col-md-4">
-          <ion-card class="mt-4 radios-card-9">
-            <div class="row component-bg-light">
-              <div class="col-1 lateral-line-primary"></div>
-              <div class="col-11 lateral-content">
-                <ion-card-header class="ps-0">
-                  <ion-card-title class="card-index-primary">01</ion-card-title>
-                </ion-card-header>
-              
-                <ion-card-content class="ps-0">
-                  <div class="row">
-                    <p class="fw-bold component-text-black">Criar um protocolo municipal para o enfrentamento de pandemias, considerando a experiência adquirida com o novo coronavírus.</p>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-6 text-center">
-                      <p class="fw-bold">Situação</p>
-                      <p>Em andamento</p>
-                    </div>
-                    <div class="col-6 text-center">
-                      <button type="button" class="btn btn-primary btn-more" (click)="proximo('nosso-mandato')">Saiba mais</button>
-                    </div>
-                  </div>
-                </ion-card-content>
-              </div>
-            </div>
-          </ion-card>
+        <!-- divisor -->
+        <div class="col-12">
+          <hr class="footer-hr mt-4">
         </div>
-
-        <div class="col-md-4">
-          <ion-card class="mt-4 radios-card-9">
-            <div class="row component-bg-light">
-              <div class="col-1 lateral-line-primary"></div>
-              <div class="col-11 lateral-content">
-                <ion-card-header class="ps-0">
-                  <ion-card-title class="card-index-primary">01</ion-card-title>
-                </ion-card-header>
-              
-                <ion-card-content class="ps-0">
-                  <div class="row">
-                    <p class="fw-bold component-text-black">Criar um protocolo municipal para o enfrentamento de pandemias, considerando a experiência adquirida com o novo coronavírus.</p>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-6 text-center">
-                      <p class="fw-bold">Situação</p>
-                      <p>Em andamento</p>
-                    </div>
-                    <div class="col-6 text-center">
-                      <button type="button" class="btn btn-primary btn-more" (click)="proximo('nosso-mandato')">Saiba mais</button>
-                    </div>
-                  </div>
-                </ion-card-content>
-              </div>
-            </div>
-          </ion-card>
+        <!-- contato -->
+        <div class="col-12">
+          <p class="project-text-white fw-bold mb-1">ENTRE EM CONTATO</p>
+          <p class="project-text-white mb-0 txt-300">E-mail: andrefraga@cms.ba.gov</p>
+          <p class="project-text-white mb-0 txt-300">Telefone: 71 9 9318-4941</p>
+          <p class="project-text-white txt-300">Endereço: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
+        </div>
+        <!-- titulo -->
+        <div class="col-12 text-center">
+          <h6 class="project-text-white">ANDRÉ FRAGA. TODOS OS DIREITOS RESERVADOS | 2021</h6>
         </div>
       </div>
     </div>
-    <!-- rodapé -->
-    <footer class="footer mt-auto py-3 component-footer z-index-up">
-      <div class="container">
-        <div class="row">
-          <!-- titulo -->
-          <div class="col-12 text-center">
-            <h6 class="project-text-white">ME SEGUE LÁ</h6>
-          </div>
-          <!-- ícones -->
-          <div class="col-12 text-center inline-father">
-            <a href="https://twitter.com/euandrefraga" target="_blank">
-              <div class="inline-child space-icon">
-                <img src="../../assets/icon-twitter.png" alt="Twitter">
-              </div>
-            </a>
-            <a href="https://www.facebook.com/euandrefraga" target="_blank">
-              <div class="inline-child space-icon">
-                <img src="../../assets/icon-facebook.png" alt="Facebook">
-              </div>
-            </a>
-            <a href="https://www.instagram.com/euandrefraga/" target="_blank">
-              <div class="inline-child space-icon">
-                <img src="../../assets/icon-instagram.png" alt="Instagram">
-              </div>
-            </a>
-            <a href="https://www.youtube.com/channel/UC7BSLZW3MscGlXvc1dpHekA" target="_blank">
-              <div class="inline-child space-icon">
-                <img src="../../assets/icon-youtube.png" alt="YouTube">
-              </div>
-            </a>
-            <a href="https://www.linkedin.com/in/andr%C3%A9-fraga-b7b15434" target="_blank">
-              <div class="inline-child">
-                <img src="../../assets/icon-linkedin.png" alt="Linkedin">
-              </div>
-            </a>
-          </div>
-          <!-- divisor -->
-          <div class="col-12">
-            <hr class="footer-hr mt-4">
-          </div>
-          <!-- contato -->
-          <div class="col-12">
-            <p class="project-text-white fw-bold mb-1">ENTRE EM CONTATO</p>
-            <p class="project-text-white mb-0 txt-300">E-mail: andrefraga@cms.ba.gov</p>
-            <p class="project-text-white mb-0 txt-300">Telefone: 71 9 9318-4941</p>
-            <p class="project-text-white txt-300">Endereço: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
-          </div>
-          <!-- titulo -->
-          <div class="col-12 text-center">
-            <h6 class="project-text-white">ANDRÉ FRAGA. TODOS OS DIREITOS RESERVADOS | 2021</h6>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
+  </footer>
 </ion-content>
