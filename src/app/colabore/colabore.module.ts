@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ColaborePageRoutingModule } from './colabore-routing.module';
 
 import { ColaborePage } from './colabore.page';
+import { NavComponent } from '../components/nav/nav.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ColaborePage } from './colabore.page';
     IonicModule,
     ColaborePageRoutingModule
   ],
-  declarations: [ColaborePage]
+  declarations: [ColaborePage, NavComponent]
 })
 export class ColaborePageModule {}

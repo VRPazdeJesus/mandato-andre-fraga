@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { NossoMandatoPageRoutingModule } from './nosso-mandato-routing.module';
 
 import { NossoMandatoPage } from './nosso-mandato.page';
+import { NavComponent } from '../components/nav/nav.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { NossoMandatoPage } from './nosso-mandato.page';
     IonicModule,
     NossoMandatoPageRoutingModule
   ],
-  declarations: [NossoMandatoPage]
+  declarations: [NossoMandatoPage, NavComponent]
 })
 export class NossoMandatoPageModule {}

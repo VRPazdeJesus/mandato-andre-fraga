@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ContatoPageRoutingModule } from './contato-routing.module';
 
 import { ContatoPage } from './contato.page';
+import { NavComponent } from '../components/nav/nav.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ContatoPage } from './contato.page';
     IonicModule,
     ContatoPageRoutingModule
   ],
-  declarations: [ContatoPage]
+  declarations: [ContatoPage, NavComponent]
 })
 export class ContatoPageModule {}
