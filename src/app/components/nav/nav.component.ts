@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavController } from  '@ionic/angular';
 
 @Component({
@@ -8,9 +8,13 @@ import { NavController } from  '@ionic/angular';
 })
 export class NavComponent implements OnInit {
 
+  @Input() page: string;
+
   constructor(private nav: NavController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   proximo(values:any) {
     this.nav.navigateForward('/'+values);

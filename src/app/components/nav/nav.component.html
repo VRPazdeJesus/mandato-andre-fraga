@@ -5,10 +5,18 @@
     </div>
     <div class="container-fluid menu-space-second-nav">
       <div class="row w-100">
-        <div class="col-3 personal-links-menu component-active" (click)="proximo('home')"><span>Bio</span></div>
-        <div class="col-3 personal-links-menu" (click)="proximo('nosso-mandato')"><span class="project-text-white">Mandato</span></div>
-        <div class="col-3 personal-links-menu" (click)="proximo('colabore')"><span class="project-text-white">Colabore</span></div>
-        <div class="col-3 personal-links-menu" (click)="proximo('contato')"><span class="project-text-white">Contato</span></div>
+        <div class="col-3 personal-links-menu" [ngClass]="{'component-active' : page === 'home'}" (click)="proximo('home')">
+          <span [ngClass]="{'project-text-white' : page !== 'home'}">Bio</span>
+        </div>
+        <div class="col-3 personal-links-menu" (click)="proximo('nosso-mandato')">
+          <span [ngClass]="{'project-text-white' : page !== 'nosso-mandato'}">Mandato</span>
+        </div>
+        <div class="col-3 personal-links-menu" (click)="proximo('colabore')">
+          <span [ngClass]="{'project-text-white' : page !== 'colabore'}">Colabore</span>
+        </div>
+        <div class="col-3 personal-links-menu" (click)="proximo('contato')">
+          <span [ngClass]="{'project-text-white' : page !== 'contato'}">Contato</span>
+        </div>
       </div>
     </div>
 </nav>
