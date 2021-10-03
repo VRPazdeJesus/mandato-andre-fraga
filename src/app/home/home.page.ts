@@ -10,7 +10,7 @@ import { PostPage } from '../modals/post/post.page';
 })
 export class HomePage {
 
-  constructor(private nav:NavController, public modalController: ModalController) {}
+  constructor(private nav: NavController, public modalController: ModalController) {}
 
   slideOpts = {
     initialSlide: 0,

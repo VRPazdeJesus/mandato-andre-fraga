@@ -65,7 +65,7 @@ ion-content {
 
 .personal-navbar {
     background-color: var(--ion-color-primary);
-    border-radius: 0 0 0 20px;
+    border-radius: 0 0 0 25px;
 }
 
 .personal-btn-login {
@@ -99,7 +99,7 @@ ion-content {
 
 .personal-links-menu {
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -114,8 +114,13 @@ ion-content {
     font-weight: bold;
 }
 
-.text-bottom {
+.text-bottom { //deprecate
     margin-top: 20px;
+}
+
+.menu-space-second-nav {
+    margin-top: 16px;
+    margin-bottom: 12px;
 }
 
 .space-left-5 {
@@ -483,6 +488,16 @@ label input[type="file"] {
 }
 
 @media (min-width: 992px) {
+    .menu-space-second-nav {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .personal-navbar {
+        background-color: var(--ion-color-primary);
+        border-radius: 0 0 0 20px;
+    }
+
     .component-background {
         margin-top: -70px;
         z-index: -1;
