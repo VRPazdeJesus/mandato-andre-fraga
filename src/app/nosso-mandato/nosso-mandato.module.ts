@@ -8,6 +8,7 @@ import { NossoMandatoPageRoutingModule } from './nosso-mandato-routing.module';
 
 import { NossoMandatoPage } from './nosso-mandato.page';
 import { NavComponent } from '../components/nav/nav.component';
+import { FooterComponent } from '../components/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { NavComponent } from '../components/nav/nav.component';
     IonicModule,
     NossoMandatoPageRoutingModule
   ],
-  declarations: [NossoMandatoPage, NavComponent]
+  declarations: [NossoMandatoPage, NavComponent, FooterComponent]
 })
 export class NossoMandatoPageModule {}

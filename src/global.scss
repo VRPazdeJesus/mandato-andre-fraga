@@ -487,6 +487,11 @@ label input[type="file"] {
     font-weight: 300;
 }
 
+.no-lr-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 @media (min-width: 992px) {
     .menu-space-second-nav {
         margin-top: 0px;

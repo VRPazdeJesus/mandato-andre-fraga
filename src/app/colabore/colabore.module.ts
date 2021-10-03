@@ -8,6 +8,7 @@ import { ColaborePageRoutingModule } from './colabore-routing.module';
 
 import { ColaborePage } from './colabore.page';
 import { NavComponent } from '../components/nav/nav.component';
+import { FooterComponent } from '../components/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { NavComponent } from '../components/nav/nav.component';
     IonicModule,
     ColaborePageRoutingModule
   ],
-  declarations: [ColaborePage, NavComponent]
+  declarations: [ColaborePage, NavComponent, FooterComponent]
 })
 export class ColaborePageModule {}

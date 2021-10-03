@@ -8,6 +8,7 @@ import { ContatoPageRoutingModule } from './contato-routing.module';
 
 import { ContatoPage } from './contato.page';
 import { NavComponent } from '../components/nav/nav.component';
+import { FooterComponent } from '../components/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { NavComponent } from '../components/nav/nav.component';
     IonicModule,
     ContatoPageRoutingModule
   ],
-  declarations: [ContatoPage, NavComponent]
+  declarations: [ContatoPage, NavComponent, FooterComponent]
 })
 export class ContatoPageModule {}
